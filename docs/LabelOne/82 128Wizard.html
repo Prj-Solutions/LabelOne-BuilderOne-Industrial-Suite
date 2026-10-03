@@ -1,0 +1,110 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Capitolo 26</title>
+<style>
+<!--
+h1           { font-size: 24 pt }
+h2           { font-size: 18 pt }
+h3           { font-size: 14 pt }
+h4           { font-size: 12 pt }
+p            { font-size: 12 pt }
+-->
+</style>
+</head>
+
+<body>
+
+<h1 align="center">Assistente EAN/UCC 128 (Studio) </h1>
+
+<p>Le regole per la creazione di un codice a barre EAN/UCC 128
+sono molte e dipendono dagli Application Identifier in esso
+contenuti. Inoltre, alcuni AI, richiedono la presenza sulla
+stessa etichetta di altri AI. Per semplificare la realizzazione
+di un simile Codice a Barre, LabelOne Studio o StudioPro, mette a
+disposizione un Assistente. Per usarlo bastera' premere sul
+pulsante <img src="image/Image242.gif" width="29" height="30">
+presente nella barra degli strumenti. Poi posizioniamo il mouse
+sull'aria di lavoro, nella posizioni in cui vorremmo il codice a
+barre. Si aprira' una finestra.</p>
+
+<p align="center"><img src="image/Image243.gif" width="510"
+height="583"></p>
+
+<p align="left">&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">In questa finestra
+        andiamo a selezionare gli AI che vogliamo inserire nel
+        codice a barre. Ad esempio AI=01 GTIN. Poi includiamo il
+        carattere di controllo, selezioniamo Variabili per l'Origine
+        dei Dati e selezioniamo var(1) dalla lista di variabili
+        disponibili (la lista di variabili disponibili e' vuota
+        se precedentemente non hai creato delle variabili). Se la
+        variabile richiede una selezione da una tabella o l'inserimento
+        del dato manuale verra' richiesta la selezione o l'inserimento
+        del dato.</p>
+        <p align="center"><img src="image/Image244.gif"
+        width="510" height="583"></p>
+        </td>
+    </tr>
+</table>
+
+<p align="left">&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Come si puo' notare
+        nelle &quot;Caratteristiche dell'identificatore&quot; il
+        campo e' a lunghezza fissa 14 caratteri numerici (GTIN).
+        In questo momento la nostra variabile vale &quot;0100&quot;&nbsp;
+        ed e' stata completata con degli zeri in testa e
+        terminata con il carattere di controllo fino ad una
+        lunghezza di 14 caratteri. In realta' pero' la parte
+        iniziale del GTIN non e' costituito da zeri ma e' la
+        concatenazione di un indicatore che nel nostro caso e
+        &quot;0&quot; e da un prefisso aziendale che supporremo
+        &quot;12345678&quot;.<br>
+        Per aggiungere queste informazioni bastera' scriverle
+        &quot;012345678var(1)&quot; nella finestra &quot;Vraiabile&quot;.</p>
+        <p align="center"><img src="image/Image245.gif"
+        width="510" height="583"></p>
+        </td>
+    </tr>
+</table>
+
+<p align="left">&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Ora possiamo aggiungere
+        gli altri AI, il 20 e il 10. Come si puo' notare il 20
+        richiede una lunghezza massima di 2 caratteri numerici
+        quindi dovremo correggere il massimo numero di caratteri
+        per Size a 2.</p>
+        <p align="center"><img src="image/Image246.gif"
+        width="510" height="583"></p>
+        </td>
+    </tr>
+</table>
+
+<p align="left">&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">A questo punto possiamo
+        premere sul tasto fine. Se in futuro volessimo modificare
+        i dati relativi al codice a barre sara' sufficiente fare
+        un doppio click sul codice a barre e si riaprira' questa
+        finestra, consentendo di apportare modifiche.</p>
+        <p align="center"><img src="image/Image247.gif"
+        width="535" height="488"></p>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

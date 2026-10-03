@@ -1,0 +1,858 @@
+<html>
+
+<head>
+<title>Capitolo 28</title>
+<style>
+<!--
+h1           { font-size: 24 pt }
+h2           { font-size: 18 pt }
+h3           { font-size: 14 pt }
+h4           { font-size: 12 pt }
+p            { font-size: 12 pt }
+-->
+</style>
+</head>
+
+<body>
+
+<h1 align="center">Application Idetifier</h1>
+
+<table border="1" width="100%" height="818">
+    <tr>
+        <td width="9%" height="19"><b>AI</b></td>
+        <td width="25%" height="19"><b>TITOLO</b></td>
+        <td width="51%" height="19"><b>CONTENUTO</b></td>
+        <td width="15%" height="19"><b>FORMATO</b></td>
+    </tr>
+    <tr>
+        <td width="9%" height="19">00</td>
+        <td width="25%" height="19">GS1 SSCC</td>
+        <td width="51%" height="19">Serial Shipping Container
+        Code</td>
+        <td width="15%" height="19">n2+n18</td>
+    </tr>
+    <tr>
+        <td width="9%" height="38">01</td>
+        <td width="25%" height="38">GTIN</td>
+        <td width="51%" height="38">Identificazione di unita'
+        commerciale a<br>
+        quantita' fissa o variabile</td>
+        <td width="15%" height="38">n2+n14</td>
+    </tr>
+    <tr>
+        <td width="9%" height="57">02</td>
+        <td width="25%" height="57">CONTENT</td>
+        <td width="51%" height="57">GTIN dell'unita' commerciale
+        a quantita' fissa o variabile all'interno di un'unita'
+        logistica</td>
+        <td width="15%" height="57">n2+n14</td>
+    </tr>
+    <tr>
+        <td width="9%" height="19">10</td>
+        <td width="25%" height="19">BATCH/LOT</td>
+        <td width="51%" height="19">Numero del lotto di
+        fabbricazione</td>
+        <td width="15%" height="19">n2+an..20</td>
+    </tr>
+    <tr>
+        <td width="9%" height="20">11<sup>1</sup></td>
+        <td width="25%" height="20">PROD DATE</td>
+        <td width="51%" height="20">Data di produzione</td>
+        <td width="15%" height="20">n2+n6</td>
+    </tr>
+    <tr>
+        <td width="9%" height="20">12<sup>1</sup></td>
+        <td width="25%" height="20">DUE DATE</td>
+        <td width="51%" height="20">Data di scadenza pagamento
+        fattura</td>
+        <td width="15%" height="20">n2+n6</td>
+    </tr>
+    <tr>
+        <td width="9%" height="20">13<sup>1</sup></td>
+        <td width="25%" height="20">PACK DATE</td>
+        <td width="51%" height="20">Data di confezionamento</td>
+        <td width="15%" height="20">n2+n6</td>
+    </tr>
+    <tr>
+        <td width="9%" height="20">15<sup>1</sup></td>
+        <td width="25%" height="20">BEST BEFORE oppure SELL BY</td>
+        <td width="51%" height="20">Data minima di validita' -
+        qualita'</td>
+        <td width="15%" height="20">n2+n6</td>
+    </tr>
+    <tr>
+        <td width="9%" height="38">17<sup>1</sup></td>
+        <td width="25%" height="38">USE BY oppure<br>
+        EXPIRY</td>
+        <td width="51%" height="38">Data massima di validita' -
+        sicurezza</td>
+        <td width="15%" height="38">n2+n6</td>
+    </tr>
+    <tr>
+        <td width="9%" height="38">20</td>
+        <td width="25%" height="38">VARIANT</td>
+        <td width="51%" height="38">Variante di prodotto uso
+        interno<br>
+        aziendale</td>
+        <td width="15%" height="38">n2+n2</td>
+    </tr>
+    <tr>
+        <td width="9%" height="19">21</td>
+        <td width="25%" height="19">SERIAL</td>
+        <td width="51%" height="19">Numero di serie</td>
+        <td width="15%" height="19">n2+an..20</td>
+    </tr>
+    <tr>
+        <td width="9%" height="38">22</td>
+        <td width="25%" height="38">QTY/DATE/<br>
+        /BATCH</td>
+        <td width="51%" height="38">Dati supplementari per
+        prodotti<br>
+        farmaceutici</td>
+        <td width="15%" height="38">n2+an..29</td>
+    </tr>
+    <tr>
+        <td width="9%" height="38">240</td>
+        <td width="25%" height="38">ADDITIONAL ID</td>
+        <td width="51%" height="38">Numero di identificazione<br>
+        supplementare del prodotto</td>
+        <td width="15%" height="38">n3+an..30</td>
+    </tr>
+    <tr>
+        <td width="9%" height="19">241</td>
+        <td width="25%" height="19">CUST. PART No.</td>
+        <td width="51%" height="19">Codice prodotto interno del
+        cliente</td>
+        <td width="15%" height="19">n3+an..30</td>
+    </tr>
+    <tr>
+        <td width="9%" height="38">242</td>
+        <td width="25%" height="38">MADE-to-ORDER VARIATION<br>
+        NUMBER</td>
+        <td width="51%" height="38">Fornitura su commessa</td>
+        <td width="15%" height="38">n3+n..6</td>
+    </tr>
+    <tr>
+        <td width="9%" height="38">250<sup>3</sup></td>
+        <td width="25%" height="38">SECONDARY<br>
+        SERIAL</td>
+        <td width="51%" height="38">Numero di serie secondario</td>
+        <td width="15%" height="38">n3+an..30</td>
+    </tr>
+    <tr>
+        <td width="9%" height="20">251<sup>3</sup></td>
+        <td width="25%" height="20">REFTO SOURCE</td>
+        <td width="51%" height="20">Entita' di origine o marca
+        auricolare</td>
+        <td width="15%" height="20">n3+an..30</td>
+    </tr>
+    <tr>
+        <td width="9%" height="19">253</td>
+        <td width="25%" height="19">DOC. ID.</td>
+        <td width="51%" height="19">Numero di identificazione
+        documento</td>
+        <td width="15%" height="19">n3+n13+n..17</td>
+    </tr>
+    <tr>
+        <td width="9%" height="19">254</td>
+        <td width="25%" height="19">GLN Extension</td>
+        <td width="51%" height="19">GLN Extension component</td>
+        <td width="15%" height="19">n3+an..20</td>
+    </tr>
+    <tr>
+        <td width="9%" height="19">30</td>
+        <td width="25%" height="19">VAR. COUNT</td>
+        <td width="51%" height="19">Quantita' variabile</td>
+        <td width="15%" height="19">n2+n..8</td>
+    </tr>
+    <tr>
+        <td width="9%" height="18">310n-369n</td>
+        <td width="25%" height="18">----</td>
+        <td width="51%" height="18">Misure commerciali e misure
+        logistiche:</td>
+        <td width="15%" height="18">n4+n6</td>
+    </tr>
+    <tr>
+        <td width="9%" height="19">310n</td>
+        <td width="25%" height="19">NET WEIGHT (Kg.)</td>
+        <td colspan="2" width="66%" height="19">Peso netto in kg</td>
+    </tr>
+    <tr>
+        <td width="9%" height="38">311n</td>
+        <td width="25%" height="38">LENGHT (m)</td>
+        <td colspan="2" width="66%" height="38">Lunghezza o 1^
+        dimensione, in metri, uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="9%" height="19">312n</td>
+        <td width="25%" height="19">WIDTH (m)</td>
+        <td colspan="2" width="66%" height="19">Larghezza,diametro
+        o 2^ dimensione, in metri, uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="9%" height="19">313n</td>
+        <td width="25%" height="19">HEIGHT (m)</td>
+        <td colspan="2" width="66%" height="19">Profondita',
+        spessore, altezza o 3^ dimensione, in metri, uso
+        commerciale</td>
+    </tr>
+    <tr>
+        <td width="9%" height="19">314n</td>
+        <td width="25%" height="19">AREA(m²)</td>
+        <td colspan="2" width="66%" height="19">Superficie, in
+        metri quadri, uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="9%" height="19">315n</td>
+        <td width="25%" height="19">NET VOLUME (I)</td>
+        <td colspan="2" width="66%" height="19">Volume, in litri,
+        uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="9%" height="18">316n</td>
+        <td width="25%" height="18">NET VOLUME (m³)&nbsp;</td>
+        <td colspan="2" width="66%" height="18">Volume, in metri
+        cubi,uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="9%" height="19">320n</td>
+        <td width="25%" height="19">NET WEIGHT (lb)</td>
+        <td colspan="2" width="66%" height="19">Peso netto, in
+        libbre, uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="9%" height="19">321n</td>
+        <td width="25%" height="19">LENGHT (i)</td>
+        <td colspan="2" width="66%" height="19">Lunghezza o 1^
+        dimensione, in pollici, uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="9%" height="19">322n</td>
+        <td width="25%" height="19">LENGHT (f)</td>
+        <td colspan="2" width="66%" height="19">Lunghezza o 1^
+        dimensione, in piedi, uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="9%" height="19">323n</td>
+        <td width="25%" height="19">LENGHT (y)</td>
+        <td colspan="2" width="66%" height="19">Lunghezza o 1^
+        dimensione, in yards, uso commerciale</td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="1" width="76%" height="678">
+    <tr>
+        <td width="8%" height="19"><b>AI</b></td>
+        <td width="18%" height="19"><b>TITOLO</b></td>
+        <td width="49%" height="19"><b>CONTENUTO</b></td>
+    </tr>
+    <tr>
+        <td width="3%" height="38">324n&nbsp;</td>
+        <td width="13%" height="38">WIDTH (i)&nbsp;</td>
+        <td width="44%" height="38">Larghezza, diametro o 2^
+        dimensione, in pollici, uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="3%" height="38">325n&nbsp;</td>
+        <td width="13%" height="38">WIDTH (f)&nbsp;</td>
+        <td width="44%" height="38">Larghezza, diametro o 2^
+        dimensione, in piedi, uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="3%" height="38">326n&nbsp;</td>
+        <td width="13%" height="38">WIDTH (y)&nbsp;</td>
+        <td width="44%" height="38">Larghezza, diametro o 2^
+        dimensione, in yards, uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="3%" height="38">327n&nbsp;</td>
+        <td width="13%" height="38">HEIGHT (i)&nbsp;</td>
+        <td width="44%" height="38">Profondita', spessore,
+        altezza o 3^ dimensione, in pollici, uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="3%" height="38">328n&nbsp;</td>
+        <td width="13%" height="38">HEIGHT (f)</td>
+        <td width="44%" height="38">Profondita', spessore,
+        altezza o 3^ dimensione, in piedi, uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="3%" height="38">329n&nbsp;</td>
+        <td width="13%" height="38">HEIGHT (y)&nbsp;</td>
+        <td width="44%" height="38">Profondita', spessore,
+        altezza o 3^ dimensione, in yards, uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">330n&nbsp;</td>
+        <td width="13%" height="19">GROSS WEIGHT(kg)</td>
+        <td width="44%" height="19">Peso lordo in chilogrammi uso
+        logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">331n&nbsp;</td>
+        <td width="13%" height="19">LENGHT (m), log&nbsp;</td>
+        <td width="44%" height="19">Lunghezza o 1^ dimensione, in
+        metri, uso logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="38">332n&nbsp;</td>
+        <td width="13%" height="38">WIDTH (m), log&nbsp;</td>
+        <td width="44%" height="38">Larghezza, diametro o 2^
+        dimensione, in metri, uso logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="38">333n&nbsp;</td>
+        <td width="13%" height="38">HEIGHT (m), log&nbsp;</td>
+        <td width="44%" height="38">Profondita', spessore,
+        altezza o 3^dimensione, in metri, uso logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">334n&nbsp;</td>
+        <td width="13%" height="19">AREA (m²), log</td>
+        <td width="44%" height="19">Superficie, in metri quadri,
+        uso logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">335n&nbsp;</td>
+        <td width="13%" height="19">VOLUME (I), log</td>
+        <td width="44%" height="19">Volume lordo, in litri, uso
+        logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="20">336n&nbsp;</td>
+        <td width="13%" height="20">VOLUME (m³), log&nbsp;</td>
+        <td width="44%" height="20">Volume lordo, in metri cubi,
+        uso logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">340n&nbsp;</td>
+        <td width="13%" height="19">GROSS WEIGHT(lb)</td>
+        <td width="44%" height="19">Peso lordo, in libbre, uso
+        logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">341n&nbsp;</td>
+        <td width="13%" height="19">LENGHT (i), log&nbsp;</td>
+        <td width="44%" height="19">Lunghezza o 1^ dimensione, in
+        pollici, uso logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">342n&nbsp;</td>
+        <td width="13%" height="19">LENGHT (f), log&nbsp;</td>
+        <td width="44%" height="19">Lunghezza o 1^ dimensione, in
+        piedi, uso logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">343n&nbsp;</td>
+        <td width="13%" height="19">LENGHT (y), log&nbsp;</td>
+        <td width="44%" height="19">Lunghezza o 1^ dimensione, in
+        yards, uso logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">344n&nbsp;</td>
+        <td width="13%" height="19">WIDTH (i), log&nbsp;</td>
+        <td width="44%" height="19">Larghezza, diametro o 2^
+        dimensione, in pollici, uso logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">345n&nbsp;</td>
+        <td width="13%" height="19">WIDTH (f), log&nbsp;</td>
+        <td width="44%" height="19">Larghezza, diametro o 2^
+        dimensione, in piedi, uso logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">346n&nbsp;</td>
+        <td width="13%" height="19">WIDTH (y), log&nbsp;</td>
+        <td width="44%" height="19">Larghezza, diametro o 2^
+        dimensione, in yards, uso logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">347n&nbsp;</td>
+        <td width="13%" height="19">HEIGHT (i), log&nbsp;</td>
+        <td width="44%" height="19">Profondita', spessore,
+        altezza o 3^ dimensione, in pollici, uso logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">348n&nbsp;</td>
+        <td width="13%" height="19">HEIGHT (f), log&nbsp;</td>
+        <td width="44%" height="19">Profondita', spessore,
+        altezza o 3^ dimensione, in piedi, uso logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">349n&nbsp;</td>
+        <td width="13%" height="19">HEIGHT (y), log&nbsp;</td>
+        <td width="44%" height="19">Profondita', spessore,
+        altezza o 3^ dimensione, in yards, uso logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">350n&nbsp;</td>
+        <td width="13%" height="19">AREA (i²)&nbsp;</td>
+        <td width="44%" height="19">Superficie, in pollici
+        quadrati, uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">351n&nbsp;</td>
+        <td width="13%" height="19">AREA (f²)&nbsp;</td>
+        <td width="44%" height="19">Superficie, in piedi quadrati,
+        uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">352n&nbsp;</td>
+        <td width="13%" height="19">AREA (y²)&nbsp;</td>
+        <td width="44%" height="19">Superficie, in yards quadrati,
+        uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">353n&nbsp;</td>
+        <td width="13%" height="19">AREA (i²), log&nbsp;</td>
+        <td width="44%" height="19">Area, in pollici quadrati,
+        uso logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">354n&nbsp;</td>
+        <td width="13%" height="19">AREA (f²), log&nbsp;</td>
+        <td width="44%" height="19">Area, in piedi quadrati, uso
+        logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">355n&nbsp;</td>
+        <td width="13%" height="19">AREA (y²), log&nbsp;</td>
+        <td width="44%" height="19">Area, in yards quadrati, uso
+        logistico</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">356n&nbsp;</td>
+        <td width="13%" height="19">NET WEIGHT (t)&nbsp;</td>
+        <td width="44%" height="19">Peso netto, in once troy, uso
+        commerciale</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">357n&nbsp;</td>
+        <td width="13%" height="19">NET VOLUME (oz)&nbsp;</td>
+        <td width="44%" height="19">Volume netto, in once (U.S.),
+        uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">360n&nbsp;</td>
+        <td width="13%" height="19">NET VOLUME (lb)&nbsp;</td>
+        <td width="44%" height="19">Volume netto, in quarti di
+        gallone, uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">361n&nbsp;</td>
+        <td width="13%" height="19">NET VOLUME (g)&nbsp;</td>
+        <td width="44%" height="19">Volume netto, in galloni (U.S.),
+        uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">362n&nbsp;</td>
+        <td width="13%" height="19">VOLUME (q), log&nbsp;</td>
+        <td width="44%" height="19">Volume lordo, in quarti di
+        gallone</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">363n&nbsp;</td>
+        <td width="13%" height="19">VOLUME (g), log&nbsp;</td>
+        <td width="44%" height="19">Volume lordo, in galloni (U.S.)</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">364n&nbsp;</td>
+        <td width="13%" height="19">NET VOLUME (i³)&nbsp;</td>
+        <td width="44%" height="19">Volume netto, in pollici cubi,
+        uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">365n&nbsp;</td>
+        <td width="13%" height="19">NET VOLUME (f³)&nbsp;</td>
+        <td width="44%" height="19">Volume netto, in piedi cubi,
+        uso commerciale</td>
+    </tr>
+    <tr>
+        <td width="3%" height="19">366n&nbsp;</td>
+        <td width="13%" height="19">NET VOLUME (y³)&nbsp;</td>
+        <td width="44%" height="19">Volume netto, in yards cubi,
+        uso commerciale</td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="1" width="76%">
+    <tr>
+        <td width="9%" height="19"><b>AI</b></td>
+        <td width="24%" height="19"><b>TITOLO</b></td>
+        <td width="52%" height="19"><b>CONTENUTO</b></td>
+        <td width="15%" height="19"><b>FORMATO</b></td>
+    </tr>
+    <tr>
+        <td width="11%">367n&nbsp;</td>
+        <td width="24%">VOLUME (i³), log&nbsp;</td>
+        <td colspan="2" width="65%">Volume lordo, in pollici cubi</td>
+    </tr>
+    <tr>
+        <td width="11%">368n&nbsp;</td>
+        <td width="24%">VOLUME (f³), log&nbsp;</td>
+        <td colspan="2" width="65%">Volume lordo, in piedi cubi</td>
+    </tr>
+    <tr>
+        <td width="11%">369n&nbsp;</td>
+        <td width="24%">VOLUME (y³), log&nbsp;</td>
+        <td colspan="2" width="65%">Volume lordo, in yards cubi</td>
+    </tr>
+    <tr>
+        <td width="11%">337n&nbsp;</td>
+        <td width="24%">KG PER m²&nbsp;</td>
+        <td width="40%">chilogrammi per metro quadrato&nbsp;</td>
+        <td width="25%">n4+n6</td>
+    </tr>
+    <tr>
+        <td width="11%">37&nbsp;</td>
+        <td width="24%">COUNT&nbsp;</td>
+        <td width="40%">Numero di unita' commerciali contenute
+        nell'unita' logistica&nbsp;</td>
+        <td width="25%">n2+n..8</td>
+    </tr>
+    <tr>
+        <td width="11%">390n&nbsp;</td>
+        <td width="24%">AMOUNT&nbsp;</td>
+        <td width="40%">Importo da pagare singola area monetaria&nbsp;</td>
+        <td width="25%">n4+n..15</td>
+    </tr>
+    <tr>
+        <td width="11%">391n&nbsp;</td>
+        <td width="24%">AMOUNT&nbsp;</td>
+        <td width="40%">Importo da pagare con codice valuta ISO&nbsp;</td>
+        <td width="25%">n4+n3+n..15</td>
+    </tr>
+    <tr>
+        <td width="11%">392n&nbsp;</td>
+        <td width="24%">PRICE&nbsp;</td>
+        <td width="40%">Importo da pagare singola unita'
+        monetaria (prodotti quantita' variabile)&nbsp;</td>
+        <td width="25%">n4+n..15</td>
+    </tr>
+    <tr>
+        <td width="11%">393n&nbsp;</td>
+        <td width="24%">PRICE&nbsp;</td>
+        <td width="40%">Importo da pagare con codice valuta ISO
+        per prodotti a quantita' variabile&nbsp;</td>
+        <td width="25%">n4+n3+n..15</td>
+    </tr>
+    <tr>
+        <td width="11%">400&nbsp;</td>
+        <td width="24%">ORDER NUMBER&nbsp;</td>
+        <td width="40%">Numero d'ordine d'acquisto cliente&nbsp;</td>
+        <td width="25%">n3+an..30</td>
+    </tr>
+    <tr>
+        <td width="11%">401&nbsp;</td>
+        <td width="24%">CONSIGNMENT&nbsp;</td>
+        <td width="40%">Numero di consegna&nbsp;</td>
+        <td width="25%">n3+an..30</td>
+    </tr>
+    <tr>
+        <td width="11%">402&nbsp;</td>
+        <td width="24%">SHIPMENT NO.&nbsp;</td>
+        <td width="40%">Numero di spedizione&nbsp;</td>
+        <td width="25%">n3+n17</td>
+    </tr>
+    <tr>
+        <td width="11%">403&nbsp;</td>
+        <td width="24%">ROUTE&nbsp;</td>
+        <td width="40%">Codice di smistamento pacchi&nbsp;</td>
+        <td width="25%">n3+an..30</td>
+    </tr>
+    <tr>
+        <td width="11%">410&nbsp;</td>
+        <td width="24%">SHIP TO LOC&nbsp;&nbsp;</td>
+        <td width="40%">GLN &#147;Spedire a , Consegnare a&#147;&nbsp;</td>
+        <td width="25%">n3+n13</td>
+    </tr>
+    <tr>
+        <td width="11%">411&nbsp;</td>
+        <td width="24%">BILL TO LOC&nbsp;</td>
+        <td width="40%">GLN &#147;Fatturare a&#147;&nbsp;</td>
+        <td width="25%">n3+n13</td>
+    </tr>
+    <tr>
+        <td width="11%">412&nbsp;</td>
+        <td width="24%">PURCHASE FROM LOC</td>
+        <td width="40%">GLN &#147;Acquistato da&#147;</td>
+        <td width="25%">n3+n13</td>
+    </tr>
+    <tr>
+        <td width="11%">413&nbsp;</td>
+        <td width="24%">SHIP FOR LOC</td>
+        <td width="40%">GLN&nbsp; &#147;Spedire per, consegnare
+        per, inoltrare a&#147;</td>
+        <td width="25%">n3+n13</td>
+    </tr>
+    <tr>
+        <td width="11%">414&nbsp;</td>
+        <td width="24%">LOC NO&nbsp;</td>
+        <td width="40%">GLN: identificazione di un luogo fisico&nbsp;</td>
+        <td width="25%">n3+n13</td>
+    </tr>
+    <tr>
+        <td width="11%">415&nbsp;</td>
+        <td width="24%">PAY TO LOC</td>
+        <td width="40%">GLN di chi emette la fattura&nbsp;</td>
+        <td width="25%">n3+n13</td>
+    </tr>
+    <tr>
+        <td width="11%">420&nbsp;</td>
+        <td width="24%">SHIP TO POST&nbsp;</td>
+        <td width="40%">Codice postale &#147;Spedire a,
+        Consegnare a&#147; (nazionale)</td>
+        <td width="25%">n3+an..20</td>
+    </tr>
+    <tr>
+        <td width="11%">421&nbsp;</td>
+        <td width="24%">SHIP TO POST&nbsp;</td>
+        <td width="40%">Codice postale &#147;Spedire a,
+        Consegnare a&#147; con codice nazione ISO</td>
+        <td width="25%">n3+n3+an..9</td>
+    </tr>
+    <tr>
+        <td width="11%">422&nbsp;</td>
+        <td width="24%">ORIGIN&nbsp;</td>
+        <td width="40%">Paese di origine del prodotto&nbsp;</td>
+        <td width="25%">n3+n3</td>
+    </tr>
+    <tr>
+        <td width="11%">423</td>
+        <td width="24%">COUNTRY INITIAL PROCESS</td>
+        <td width="40%">Paese di lavorazione iniziale del
+        prodotto con codice nazionale ISO&nbsp;</td>
+        <td width="25%">n3+n3+n..12</td>
+    </tr>
+    <tr>
+        <td width="11%">424&nbsp;</td>
+        <td width="24%">COUNTRY - PROCESS.</td>
+        <td width="40%">Paese di lavorazione con codice nazionale
+        ISO&nbsp;</td>
+        <td width="25%">n3+n3</td>
+    </tr>
+    <tr>
+        <td width="11%">425&nbsp;</td>
+        <td width="24%">COUNTRY - DISASSEMBLY</td>
+        <td width="40%">Paese di scomposizione con codice
+        nazionale ISO&nbsp;</td>
+        <td width="25%">n3+n3</td>
+    </tr>
+    <tr>
+        <td width="11%">426&nbsp;</td>
+        <td width="24%">COUNTRY - FULL PROCESS</td>
+        <td width="40%">Paese di lavorazione completa con codice
+        nazionale ISO&nbsp;</td>
+        <td width="25%">n3+n3</td>
+    </tr>
+    <tr>
+        <td width="11%">7001&nbsp;</td>
+        <td width="24%">NSN&nbsp;</td>
+        <td width="40%">Numero di stock NATO&nbsp;</td>
+        <td width="25%">n4+n13</td>
+    </tr>
+    <tr>
+        <td width="11%">7002&nbsp;</td>
+        <td width="24%">MEAT CUT&nbsp;</td>
+        <td width="40%">Carcasse animali e classificazione dei
+        tagli UN/ECE</td>
+        <td width="25%">n4+an..30</td>
+    </tr>
+    <tr>
+        <td width="11%">703s&nbsp;</td>
+        <td width="24%">PROCESSOR #s</td>
+        <td width="40%">Numero di approvazione del laboratorio di
+        lavorazione intermedio con codice nazionale ISO</td>
+        <td width="25%">n4+n3+an..27</td>
+    </tr>
+    <tr>
+        <td width="11%">7003&nbsp;</td>
+        <td width="24%">EXPIRY DATE/TIME</td>
+        <td width="40%">Data e tempo massimo di validita'&nbsp;</td>
+        <td width="25%">N4+n10</td>
+    </tr>
+    <tr>
+        <td width="11%">8001&nbsp;</td>
+        <td width="24%">DIMENSIONS</td>
+        <td width="40%">Prodotti in rotoli - larghezza, lunghezza,
+        diametro interno, senso di svolgimento e giunte</td>
+        <td width="25%">n4+n14</td>
+    </tr>
+    <tr>
+        <td width="11%">8002&nbsp;</td>
+        <td width="24%">CMT No&nbsp;</td>
+        <td width="40%">Numero sequenziale elettronico per
+        applicazioni di telefonia cellulare&nbsp;</td>
+        <td width="25%">n4+an..20</td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="1" width="77%">
+    <tr>
+        <td width="9%" height="19"><b>AI</b></td>
+        <td width="24%" height="19"><b>TITOLO</b></td>
+        <td width="52%" height="19"><b>CONTENUTO</b></td>
+        <td width="15%" height="19"><b>FORMATO</b></td>
+    </tr>
+    <tr>
+        <td width="10%">8003&nbsp;</td>
+        <td width="23%">GRAI&nbsp;</td>
+        <td width="43%">Numero di identificazione per beni
+        arendere&nbsp;</td>
+        <td width="24%">n4+n14+an..16</td>
+    </tr>
+    <tr>
+        <td width="10%">8004&nbsp;</td>
+        <td width="23%">GIAI&nbsp;</td>
+        <td width="43%">Numero di identificazione per
+        beniindividuali&nbsp;</td>
+        <td width="24%">n4+an..30</td>
+    </tr>
+    <tr>
+        <td width="10%">8005&nbsp;</td>
+        <td width="23%">PRICE PER UNIT&nbsp;</td>
+        <td width="43%">Prezzo per unita' di misura&nbsp;</td>
+        <td width="24%">n4+n6</td>
+    </tr>
+    <tr>
+        <td width="10%">8006&nbsp;</td>
+        <td width="23%">GCTIN&nbsp;</td>
+        <td width="43%">Identificazione dei componenti di un
+        prodotto&nbsp;</td>
+        <td width="24%">n4+n14+n2+n2</td>
+    </tr>
+    <tr>
+        <td width="10%">8007&nbsp;</td>
+        <td width="23%">IBAN&nbsp;</td>
+        <td width="43%">Numero di conto corrente bancario
+        internazionale&nbsp;</td>
+        <td width="24%">n4+an..30</td>
+    </tr>
+    <tr>
+        <td width="10%">80081&nbsp;</td>
+        <td width="23%">PROD TIME&nbsp;</td>
+        <td width="43%">Data e ora di produzione&nbsp;</td>
+        <td width="24%">n4+n8+n..4</td>
+    </tr>
+    <tr>
+        <td width="10%">8018&nbsp;</td>
+        <td width="23%">GSRN&nbsp;</td>
+        <td width="43%">Numero Globale di Relazione di Servizio&nbsp;</td>
+        <td width="24%">n4+n18</td>
+    </tr>
+    <tr>
+        <td width="10%">8020&nbsp;</td>
+        <td width="23%">REF No</td>
+        <td width="43%">Numero del bollettino di pagamento&nbsp;</td>
+        <td width="24%">n4+an..25</td>
+    </tr>
+    <tr>
+        <td width="10%">8100&nbsp;</td>
+        <td width="23%">-</td>
+        <td width="43%">Codice esteso per i coupons&nbsp;</td>
+        <td width="24%">n4+n1+n5</td>
+    </tr>
+    <tr>
+        <td width="10%">8101&nbsp;</td>
+        <td width="23%">-</td>
+        <td width="43%">Codice esteso per i coupons</td>
+        <td width="24%">n4+n1+n5+n4</td>
+    </tr>
+    <tr>
+        <td width="10%">8102&nbsp;</td>
+        <td width="23%">-</td>
+        <td width="43%">Codice esteso per i coupons</td>
+        <td width="24%">n4+n1+n1</td>
+    </tr>
+    <tr>
+        <td width="10%">903&nbsp;</td>
+        <td width="23%">INTERNAL&nbsp;</td>
+        <td width="43%">Informazioni concordate tra i
+        partnercommerciali&nbsp;</td>
+        <td width="24%">n2+an..30</td>
+    </tr>
+    <tr>
+        <td width="10%">91 - 9 93&nbsp;</td>
+        <td width="23%">INTERNAL&nbsp;</td>
+        <td width="43%">Informazioni interne&nbsp;</td>
+        <td width="24%">n2+an..30</td>
+    </tr>
+</table>
+
+<h2><a name="1">Legenda degli Application Identifiers</a></h2>
+
+<table border="1" width="78%">
+    <tr>
+        <td width="18%">1</td>
+        <td width="82%">volendo indicare solo anno e mese,<br>
+        rappresentare gg con 00</td>
+    </tr>
+    <tr>
+        <td width="18%">2</td>
+        <td width="82%">(x) indica la lunghezza del campo dati</td>
+    </tr>
+    <tr>
+        <td width="18%">3</td>
+        <td width="82%">il contenuto dati e' definito da chi lo
+        applica&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="18%">(s)</td>
+        <td width="82%">indica la sequenza dei laboratori di
+        lavorazione della filiera</td>
+    </tr>
+    <tr>
+        <td width="18%">(n)</td>
+        <td width="82%">piu' una cifra per la virgola decimale</td>
+    </tr>
+</table>
+
+<h2><a name="2">Legenda del formato</a></h2>
+
+<table border="1" width="78%">
+    <tr>
+        <td width="17%">a</td>
+        <td width="83%">caratteri alfabetici</td>
+    </tr>
+    <tr>
+        <td width="17%">ax</td>
+        <td width="83%">caratteri alfabetici, lunghezza fissa</td>
+    </tr>
+    <tr>
+        <td width="17%">a..x</td>
+        <td width="83%">caratteri alfabetici, lunghezza variabile</td>
+    </tr>
+    <tr>
+        <td width="17%">n</td>
+        <td width="83%">caratteri numerici&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="17%">nx</td>
+        <td width="83%">caratteri numerici, lunghezza fissa&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="17%">n..x</td>
+        <td width="83%">caratteri numerici, lunghezza variabile</td>
+    </tr>
+    <tr>
+        <td width="17%">an</td>
+        <td width="83%">caratteri alfanumerici</td>
+    </tr>
+    <tr>
+        <td width="17%">anx</td>
+        <td width="83%">caratteri alfanumerici, lunghezza fissa</td>
+    </tr>
+    <tr>
+        <td width="17%">an..x</td>
+        <td width="83%">caratteri alfanumerici, lunghezza
+        variabile</td>
+    </tr>
+</table>
+</body>
+</html>

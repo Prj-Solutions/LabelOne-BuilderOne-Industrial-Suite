@@ -1,0 +1,481 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Capitolo 37</title>
+<style>
+<!--
+h1           { font-size: 24 pt }
+h2           { font-size: 18 pt }
+h3           { font-size: 14 pt }
+h4           { font-size: 12 pt }
+p            { font-size: 12 pt }
+-->
+</style>
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><h2 align="left"><a name="1">Input da
+        Database</a></h2>
+        <p align="left">Importare dei dati da dabase è una delle
+        cose più spesso richieste. Con BuilderOne è molto
+        semplice. Il metodo è quello di inserire una tabella in
+        un frame e di esportare tutti i campi della tabella in
+        relativi file. L'esportazione verrà fatta quando si
+        seleziona un record. </p>
+        <p align="left">Per dimostrare come questo sia semplice
+        dobbiamo creare un database e la relativa tabella con
+        alcuni campi. Builder One lavora con tabelle con campi
+        preferibilmente di tipo testo. Questo semplifica
+        notevolmente la formattazione dei valori che possono
+        essere di qualsiasi tipo e esportati sia in file che in
+        altri database, magari di diverso formato, che comunque
+        hanno i campi di tipo testo. Tali informazioni di tipo
+        testo saranno poi trattate da BuilderOne e LabelOne come
+        numeri o come stringhe in base al caso. Quindi si
+        consiglia di fare database con campi sempre di tipo testo.</p>
+        <p align="left">Per creare un database possiamo usare lo
+        strumento Database Manager presente nella barra degli
+        strumenti</p>
+        <p align="center"><img src="image/Image308.gif"
+        border="1" width="472" height="61"><br>
+        </p>
+        <p align="left">Il tipo di database può essere hsql
+        oppure access senza dover installare niente. Se invece si
+        ha un server di database come MySql o Sql(Microsoft) è
+        possibile creare delle tabelle e strutture di tabelle, ma
+        il database di solito è creato dal server con le
+        opportune funzioni di cui è dotato. </p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Per ora usiamo un comune
+        Hsql che è una versione semplificata e StandAlone (non
+        fa uso del server) di MySql. Dopo aver cliccato su
+        Database Manager, scegliamo di creare un nuovo database.</p>
+        <p align="center"><img src="image/Image309.gif"
+        border="1" width="186" height="52"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Poi inseriamo il Nome
+        del database da creare, e selezioniamo HSQLDB come tipo
+        di database. Se non tocchiamo la directory di lavoro, il
+        database verrà messo nella cartella Data presente nel
+        nostro progetto. In questo modo saremo sicuri di
+        trasferire tutto ciò che ci occorre spostando la sola
+        cartelle del progetto. Ora Confermiamo e passiamo al
+        prossimo step.</p>
+        <p align="center"><img src="image/Image310.gif"
+        width="357" height="191"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Si aprirà una finestra
+        che ci consente di creare Tabelle, visionare i record
+        delle Tabelle, di tesare comandi Sql, e di modificare la
+        struttura di tabelle. Premiamo sul tasto Crea Nuova
+        Tabella.</p>
+        <p align="center"><img src="image/Image311.gif"
+        width="500" height="400"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Inseriamo un nome per la
+        tabella e poi premiamo OK</p>
+        <p align="center"><img src="image/Image312.gif"
+        width="297" height="128"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Selezioniamo la tabella
+        e premiamo su Edita la Struttura della tabella
+        selezionata.</p>
+        <p align="center"><img src="image/Image313.gif"
+        border="1" width="310" height="167"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Premiamo sul pulsante
+        &quot;Aggiunge una riga&quot; per inserire un nuovo campo.</p>
+        <p align="center"><img src="image/Image314.gif"
+        width="800" height="400"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Poi editiamo il Nome
+        Campo cliccando con il mouse e scriviamo Articolo.</p>
+        <p align="center"><img src="image/Image315.gif"
+        border="1" width="242" height="121"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Creiamo altri due campi
+        Ingredienti e PrezzoKg. Nel creare dei campi si consiglia
+        di scegliere dei nomi che non contengano apostrofi
+        parentesi, virgole spazi. Nella maggior parte dei casi
+        BuilderOne pone rimedio all'uso di caratteri non
+        consentiti, ma ci sono casi non contemplati che
+        creerebbero problemi nel trattamento dei dati.</p>
+        <p align="center"><img src="image/Image316.gif"
+        width="800" height="400"></p>
+        <p align="left">Conviene lasciare inalterate le altre
+        opzioni. In una tabella serve sempre un P.Key (Chiave
+        Primaria) Univoca. Questo consentirà di distinguere i
+        record. La lunghezza di un campo non deve essere
+        esagerata, perchè produce, in molti database, un
+        appesantimanto dei dati e delle relative interrogazioni.
+        Se è necessario è possibile scegliere un tipo senza
+        lunghezza per quei dati che potrebbero superare qualsiasi
+        aspettativa (CLOB). Ogni database ha un suo tipo di dati.
+        BuilderOne non fa altro che elencarli. Per un help sui
+        tipi è possibile cercare in internet.</p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Ora popoliamo il
+        database inserendo dei dati. Clicchiamo due volte sulla
+        tabella.</p>
+        <p align="center"><img src="image/Image317.gif"
+        border="1" width="302" height="150"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Si aprirà una nuova
+        finestra dove possimo usare il pulsante &quot;Insert new
+        row&quot;. </p>
+        <p align="center"><img src="image/Image318.gif"
+        border="1" width="409" height="176"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Inseriamo i dati nel
+        record non dimenticando l'ID che essendo la chiave
+        primaria è necessaria. Useremo ID come codice articolo.
+        Ricordare di salvare &quot;Save changes&quot; prima di
+        uscire. Usciamo da Database Manager.</p>
+        <p align="center"><img src="image/Image319.gif"
+        border="1" width="391" height="196"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Ora non ci resta che
+        inserire la tabella appena create in un nuovo frame.</p>
+        <p align="left">Creiamo il nuovo frame &quot;SelezioneRecord&quot;,
+        poi nel pannello &quot;Componenti&quot; nella sezione
+        &quot;InserimentoDati&quot; selzioniamo &quot;Tabella&quot;.</p>
+        <p align="center"><img src="image/Image320.gif"
+        border="1" width="257" height="107"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Spostiamoci sul frame
+        SelezioneRecord posizioniamo il mouse in alto a sinistra
+        e clicchiamo per inserire la tabella. Si aprirà una
+        finstra per selezionare il tipo di database. Ci verrà
+        proposto l'ultimo usato confermiamo </p>
+        <p align="center"><img src="image/Image321.gif"
+        width="517" height="382"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Selezioniamo il file
+        database.properties che nel nostro caso è il database.</p>
+        <p align="center"><img src="image/Image322.gif"
+        width="508" height="360"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Confermiamo e
+        selezioniamo la tabella da inserire nel frame.</p>
+        <p align="center"><img src="image/Image323.gif"
+        width="268" height="133"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Il risultato ottenuto
+        sarà il seguente. Non ci resta che dimensionare la
+        tabella a nostro piacimento, e la dimesione del carattere
+        per ottenere delle barre di scorrimento sufficientemente
+        grosse da essere usate in applicazioni touch. Inseriamo
+        il pulsante esci per poter uscire dal frame. </p>
+        <p align="center"><img src="image/Image324.gif"
+        width="519" height="385"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h3><a name="2">Regolare la larghezza delle colonne</a></h3>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Per dimensionare le
+        colonne bisogna &quot;Attivare&quot; la finestra Tabella.
+        La tabella infatti è come se fosse coperta da un vetro,
+        si puo spostare e dimensionare, ma non si può accedere
+        nel suo interno. Per farlo alcune finestre hanno l'opzione
+        Attiva Finestra. Cliccare con il tasto destro del mouse
+        sulla tabella e selezionare &quot;Attiva Finestra&quot;.</p>
+        <p align="center"><img src="image/Image325.gif"
+        width="519" height="380"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%">Ora possimo &quot;entrare nella finestra&quot;,
+        è come se avessimo tolto il vetro che la proteggeva.
+        Regoliamo la larghezza delle colonne trascinandole con il
+        mouse.<p align="center"><img src="image/Image326.gif"
+        width="519" height="381"></p>
+        <p align="left">Per uscire dalla modalità &quot;Finestra
+        Attiva&quot; basta cliccare con il mouse in un punto del
+        frame all'esterno della finestra attiva.</p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h3><a name="3">Regolare la larghezza delle righe</a></h3>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Dopo aver attivato la
+        finestra come indicato nel paragrafo precedente, è
+        possibile regolare l'altezza delle righe. Non è
+        possibile fare righe con altezze diverse. L'altezza delle
+        righe si regola sulla prima riga e risulterà uguale a
+        quella delle altre righe.</p>
+        <p align="center"><img src="image/Image327.gif"
+        width="520" height="382"></p>
+        <p align="left">Per uscire dalla modalità &quot;Finestra
+        Attiva&quot; basta cliccare con il mouse in un punto del
+        frame all'esterno della finestra attiva.</p>
+        </td>
+    </tr>
+</table>
+
+<h3><a name="4">Proprietà Tabella</a></h3>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Per usare il componente
+        Tabella non è necessario modificare le proprità qui
+        sotto riportate. Tali proprità vengono settate
+        automaticamente al momento dell'inserimento della tabella.
+        </p>
+        <p align="center"><img src="image/Image328.gif"
+        width="350" height="422"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h4><a name="5">Campo Cerca Visibile</a></h4>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Permette di visualizzare
+        una finestra per la ricerca del record. La ricerca è
+        effetuata sul campo con cui è fatto il collegamento alla
+        tabella. Questo poò esere visto nelle proprità della
+        tabella alla destra del nome tabella.</p>
+        <p align="center"><img src="image/Image329.gif"
+        width="512" height="73"></p>
+        <p align="left">E' comunque possibile cambiare il campo
+        su cui è fatta la ricerca utilizzando il polsante
+        opzioni cerca.</p>
+        </td>
+    </tr>
+</table>
+
+<h4><a name="6">Pulsante Opzioni Cerca Visibile</a></h4>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Permette di cambiare il
+        campo su cui fare la ricerca.</p>
+        <p align="center"><img src="image/Image330.gif"
+        width="528" height="111"></p>
+        </td>
+    </tr>
+</table>
+
+<h4><a name="7">Pulsante Opzioni Visibile</a></h4>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Permette di nascondere
+        alcune colonne. Non bisogna nascondere la chiave primaria,
+        perchè altrimente risulta impossibile fare delle
+        ricerche.</p>
+        <p align="center"><img src="image/Image331.gif"
+        width="513" height="76"></p>
+        <p align="left">Premendo sul pulsante opzioni un menù
+        permette di selezionare le opzioni.</p>
+        <p align="center"><img src="image/Image332.gif"
+        width="512" height="276"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h3><a name="8">Esportare il Record Selezionato</a></h3>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Per poter usare le
+        informazioni presenti nel record dobbiamo esportare il
+        record selezionato in una serie di file. Per fare questo
+        flegghiamo &quot;Esporta tutti i campi&quot; nelle
+        proprietà della tabella.</p>
+        <p align="center"><img src="image/Image333.gif"
+        width="357" height="421"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Cliccando per fleggare l'opzione,
+        si apre una finestra</p>
+        <p align="center"><img src="image/Image334.gif"
+        width="336" height="218"></p>
+        <p align="left">Sono riportati tutti i file in cui
+        verrano salvati i vari campi della tabella. Il Nome di
+        ogni file è costituito dal nome del database, dlla
+        tabella, e del campo. La finestra serve non solo a vedere
+        come si chiameranno i vari file, ma permette un controllo
+        sui preesistenti file per evitare delle involontarie
+        sovrascritture. I file vengono creati solo se si preme ok.
+        Se si annulla l'operazione non viene creto niente. </p>
+        <p align="left">Laggiornamento dei file verrà fatto ad
+        ogni selezione del record.</p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h3><a name="9">Controlliamo i valori esportati</a></h3>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%">Per controllare i valori che abbiamo
+        esportato, o più in generale per usare i valori
+        esportati dal database, basterà usare i file relativi.
+        Nell'esempio HelloWorld inseriamo 4 finestre &quot;Monitor
+        di file&quot; per &quot;vedere&quot; quando i valori
+        vengono esportati.<p>Prima selezioniamo &quot;Monitor di
+        file&quot; nella sezione &quot;Sentinelle&quot; dell
+        pannello &quot;Componenti&quot; poi portiamo il mouse sul
+        frame SelezioneRecord e inseriamo il Monitor di file alla
+        sinistra della tabella. Poi ricordiamoci di settare il
+        file che il monitor deve osservare. Lo facciamo per tutti
+        e quattro i file creati dalla finestra &quot;Esportazione
+        Campi&quot;.</p>
+        <p align="center"><img src="image/Image335.gif"
+        width="513" height="397"></p>
+        <p align="left">Ora eseguimo l'applicazione e
+        controlliamo la variazione dei valori esportati quando
+        clicchiamo su un record.</p>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

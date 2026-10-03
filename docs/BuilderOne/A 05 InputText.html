@@ -1,0 +1,231 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Capitolo 34</title>
+<style>
+<!--
+h1           { font-size: 24 pt }
+h2           { font-size: 18 pt }
+h3           { font-size: 14 pt }
+h4           { font-size: 12 pt }
+p            { font-size: 12 pt }
+-->
+</style>
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><h2 align="left"><a name="1">Input da
+        Testiera</a></h2>
+        <p align="left">Una delle cose più comuni di un progetto
+        è l'inserimento di dati manuali da parte dell'utilizzatore.
+        Per fare questo è neceserraio avere una finestra in cui
+        è possinìbile scrivere. Per mostrare come si fa, faremo
+        riferimento all'esempio HelloWorld. Inseriremo due
+        finestre, per inserire Lotto e Note, nel Frame_2.</p>
+        <p align="left">Cliccare sul menu &quot;Testo&quot; nella
+        sezione &quot;Inserimento Dati&quot; (1), poi portarsi
+        con il mouse sul Frame_2 (2), e cliccare per inserire il
+        Componente (3).<br>
+        </p>
+        <table border="0" cellpadding="0" cellspacing="0"
+        width="100%">
+            <tr>
+                <td align="right" width="45%"><p align="center">(1)</p>
+                <p align="center"><img src="image/Image294.gif"
+                width="264" height="168"></p>
+                </td>
+                <td><font size="7">-&gt;</font></td>
+                <td width="45%"><p align="center">(2)</p>
+                <p align="center"><img src="image/Image295.gif"
+                width="517" height="395"></p>
+                </td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%">&nbsp; </td>
+    </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="50%"><p align="center">(3)</p>
+        <p align="center"><img src="image/Image296.gif"
+        width="516" height="401"></p>
+        </td>
+        <td width="50%">La finestra ora inserita deve essere
+        configurata per salvare il contenuto in un file.</td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><h3 align="left"><a name="2">Proprietà
+        Testo (inserimento dati)</a></h3>
+        <table border="0" cellpadding="0" cellspacing="0"
+        width="100%">
+            <tr>
+                <td valign="top" width="50%">Per usare il
+                componente Testo di inserimento dati, è
+                necessario salvare il testo inserito in un file.
+                In questo modo poi potremo usare il testo
+                leggendolo dal file. Il file in cui si intende
+                salvare il testo, va inserito dove mostra il
+                puntatore del mouse, nell'immagine di seguito. <p>Usiamo
+                il pulsante sfoglia per selezionare il file.
+                Possiamo anche inserire un Messaggio per l'Operatore,
+                oppure lo cancelliamo. Nel nostro caso inseriamo
+                &quot;Lotto&quot;, come commento per l'operatore
+                e Lotto.txt, come file dove salvare il testo
+                inserito. Per continuare il nostro esempio,
+                inseriamo ancora un componente Testo sotto il
+                precedente, per inserire una eventuale Nota.
+                Scriveremo Note nel commento e useremo Note.txt
+                come file per salvare l'informazione inserita.</p>
+                </td>
+                <td width="50%"><img src="image/Image297.gif"
+                width="326" height="394"></td>
+            </tr>
+        </table>
+        <table border="0" cellpadding="0" cellspacing="0"
+        width="100%">
+            <tr>
+                <td width="50%"><img src="image/Image298.gif"
+                width="518" height="400"></td>
+                <td width="50%">Il testo inserito dall'operatore,
+                verrà salvato in due file Lotto.txt e Note.txt,
+                ma questo solo se nel frame viene inserito un
+                pulsante &quot;Monitor di Stampa&quot;, oppure un
+                pulsante &quot;Sequencer&quot;. Il pulsante
+                &quot;Monitor di Stampa&quot; si usa solo se è
+                necessario stampare un documento che contega le
+                informazioni Lotto e Note. Se invece la nostra
+                intenzione è quella di salvare Le informazioni,
+                Lotto e Note per usarle in seguito, allora usiamo
+                il pulsante &quot;Sequencer&quot;. Continuando il
+                nostro esempio HelloWorld, inseriamo il pulsante
+                Sequencer.</td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%">
+    <tr>
+        <td><h3 align="left"><a name="3">Opzioni di Formattazione</a>.</h3>
+        <p align="left">In alcuni casi è comodo impedire che l'operatore
+        inserisca valori &quot;non ammessi&quot;. Per fare questo
+        possiamo usare le opzioni di formattazione, cliccando sul
+        triangolino a sinistra che permette di scoprire le varie
+        opzioni.</p>
+        <p align="center"><img src="image/Image506.gif"
+        border="1" width="400" height="208"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%">
+    <tr>
+        <td><h4 align="left"><a name="4">Lunghezza</a> </h4>
+        <p align="left">Per default la lunghezza è variabile, in
+        questo modo non viene fatto nessun controllo sulla
+        lunghezza.<br>
+        Nell'esempio HelloWorld, imporremo che il lotto deve
+        essere di almeno 6 caratteri numerici, senza virgola. Per
+        &quot;imporre&quot; che sia lungo 6 caratteri, usiamo la
+        formattazione della lunghezza. Sceglieremo Lunghezza
+        &quot;Fissa&quot;. Si aprirà una finestra per inserire
+        la lunghezza desiderata. Inseriremo 6.</p>
+        <p align="center"><img src="image/Image507.gif"
+        border="1" width="555" height="178"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%">
+    <tr>
+        <td><p align="left">A questo punto, vedremo che le
+        informazioni relative all'identificativo, si sono
+        aggiornate e la lunghezza risulta 6.</p>
+        <p align="center"><img src="image/Image508.gif"
+        border="1" width="301" height="215"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%">
+    <tr>
+        <td><h5 align="left"><a name="5">Lunghezza Fissa Forzata</a></h5>
+        <p align="left">Per ottenere che la lunghezza sia 6
+        caratteri, possimo scegliere Forzata. In questo modo gli
+        eventuali pulsanti di conferma, presenti nel frame
+        verranno disabilitati e verranno riabilitati, solo se i
+        caratteri inseriti saranno quelli giusti.</p>
+        <p align="center"><img src="image/Image508.gif"
+        border="1" width="301" height="215"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%">
+    <tr>
+        <td><h5><a name="6">Lunghezza Fissa Completata</a></h5>
+        <p align="left">Questa opzione completa automaticamente
+        il testo inserito con dei caratteri a destra o a sinistra
+        in base alle opzioni scelte.</p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%">
+    <tr>
+        <td><h4><a name="7">Tipi di dati permessi</a></h4>
+        <p align="left">Per &quot;imporre&quot; che nella
+        finestra di testo siano inseriti solo numeri, nel campo
+        tipo di dati permessi, selezioniamo Numeri interi
+        positivi.</p>
+        <p align="center"><img src="image/Image509.gif"
+        border="1" width="387" height="256"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%">
+    <tr>
+        <td><p align="left">Per completare l'esempio HelloWorld
+        inseriremo, nel campo Messaggio, l'informazione (6 numeri),
+        per guidare l'operatore nell'inserimento dei dati.</p>
+        <p align="center"><img src="image/Image510.gif"
+        border="1" width="353" height="184"></p>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

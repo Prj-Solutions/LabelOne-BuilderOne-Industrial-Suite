@@ -1,0 +1,466 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Capitolo 43</title>
+<style>
+<!--
+h1           { font-size: 24 pt }
+h2           { font-size: 18 pt }
+h3           { font-size: 14 pt }
+h4           { font-size: 12 pt }
+p            { font-size: 12 pt }
+-->
+</style>
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><h2 align="left"><a name="1">Sincronismi</a></h2>
+        <p align="left">Il sincronismo permette di ottenere degli
+        automatismi che sono scatenati dall'arrivo di un dato da
+        seriale. Il pulsante di stampa &quot;Monitor di Stampa&quot;
+        o quello di esecuzione sequenze &quot;Sequencer&quot;
+        possono essere associati ad una regola del canale seriale.
+        Quando la regola è soddisfatta il pulsante associato è
+        premuto automaticamente e tutte le azioni inserite nella
+        lista di quel pulsante saranno eseguite.</p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Per associare ad un
+        pulsante un sincronismo si flegga &quot;Usa Lista di
+        Azioni&quot; nelle proprietà del pulsante. Questa
+        opzione è presente solo nel pulsante &quot;Monitor di
+        stampa&quot; e &quot;Sequencer&quot;.</p>
+        <p align="center"><img src="image/Image406.gif"
+        border="1" width="311" height="94"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Quano &quot;Usa Lista di
+        Azioni&quot; è fleggato è mostrata la lista delle
+        azioni collegate al pulsante. Cioè la lista delle azioni
+        che verrano eseguite tutte le volte che si preme il
+        pulsante. Se la lista è vuota come in questo caso viene
+        eseguito il frame che contiene il pulsante.</p>
+        <p align="center"><img src="image/Image407.gif"
+        border="1" width="292" height="89"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h3><a name="5">Configurazione Lista Azioni</a></h3>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Cliccando su di essa è
+        possibile aggiungere un'azione e un sincronismo.</p>
+        <p align="center"><img src="image/Image408.gif"
+        width="600" height="135"></p>
+        <p align="left"><strong>Stampante -1</strong>: indica che
+        il documento non verra stampato.<br>
+        <strong>Stampante -2</strong>: il documento verrà
+        stampato sulla stampante di default di sistema.<br>
+        <strong>Stampante -3</strong>: si aprirà una finestra
+        che consentirà di selezionare la stampante su cui
+        stampare.<br>
+        <strong>Stampante N con N&gt;0</strong>: il documento
+        verrà stampato sulla stampante termica eNnesima della
+        lista di stampanti installate in LabelOne.</p>
+        <p align="left"><strong>Quantità:</strong> ha senso solo
+        nel caso di stampa. Indica il numero di copie della
+        stampa.</p>
+        <p align="left"><strong>Passo:</strong> indica ogni
+        quanti cicli viene eseguita l'azione. Se Passo=2 l'azione
+        verrà eseguita ogni due pressioni del tasto. Nel caso di
+        sincronismo abilitato, ogni due Eventi sincro. Il passo
+        può anche indicare una condizione e quindi eseguire un'azione
+        solo se è verificata una determinata condizione.</p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><h3><a name="2">Lista di Azioni</a></h3>
+        <p align="left">La lista può essere costituita da
+        Documenti da stampare, Frame da aprire, Sequenze da
+        eseguire. Per aggiungere un'azione cliccare su &quot;Aggiunge
+        una nuova azione alla lista&quot;. Le opzioni presenti
+        nella finestra sono in funzione del tipo di documento
+        selezionato.</p>
+        <p align="center"><img src="image/Image409.gif"
+        width="431" height="422"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><h3><a name="3">Esempio di Sequenza (Storico
+        Pesate)</a></h3>
+        <p align="left">Continuando il nostro esempio HelloWorld,
+        supponiamo di voler memorizzare ogni singola pesata in un
+        database. In tale progetto abbiamo già un database dal
+        nome &quot;database&quot; con una tabella dal nome &quot;Tabella&quot;.
+        Usiamo Manager di database e con il pulsante &quot;Crea
+        Nuova Tabella&quot; aggiungiamo la tabella &quot;Pesate&quot;.</p>
+        <p align="center"><img src="image/Image410.gif"
+        width="312" height="190"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Selezioniamo la tabella
+        usiamo il tasto &quot;Edita la Struttura...&quot;</p>
+        <p align="center"><img src="image/Image411.gif"
+        width="312" height="190"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Aggiungiamo i vari campi:
+        Peso, Tara, e DataOrario. Quest'ultimo supponiamolo in
+        formato DD/MM/YYYY hh:mm:ss quindi useremo anche per
+        questo 50 caratteri.</p>
+        <p align="center"><img src="image/Image412.gif"
+        width="800" height="243"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Realizziamo la sequenza
+        cliccando sul pannello sequenze. Poi aggiungiamo una
+        nuova sequenza premendo su</p>
+        <p align="center"><img src="image/Image413.gif"
+        border="1" width="273" height="124"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Inseriamo un nome per la
+        sequenza che descriva il suo scopo.</p>
+        <p align="center"><img src="image/Image414.gif"
+        width="301" height="129"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Una sequenza può essere
+        costituita da Azioni NoGui (cioè senza interfaccia
+        utente) e da Azioni Gui. Le azioni no gui sono operazioni,
+        manipolazione di stringhe, esportazione di dati in file o
+        database, oppure condizioni &quot;IF ELSE&quot; cicli
+        &quot;FOR&quot;. Le azioni Gui sono finestre per
+        inserimento dati manuali, finestre per selezione di date,
+        finestre per selezione di record. In generale le sequenze
+        vengono usate con azioni NoGui.</p>
+        <p align="left">Appena creata la sequenza EsportaPesata,
+        sarà inserita per default un'azione NoGui. Tale azione
+        deve essere configurata per l'esportazione della pesata
+        nella tabella Pesate. Il record sarà costituito da tre
+        informazioni. DataOrario che funge anche da chiave
+        primaria, Peso e da Tara. Cominciamo col realizzare la
+        DataOrario.</p>
+        <p align="center"><img src="image/Image415.gif"
+        border="1" width="317" height="411"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Ora dobbiamo configurare
+        il tipo di esportazione</p>
+        <p align="center"><img src="image/Image416.gif"
+        border="1" width="312" height="314"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Clicchiamo su
+        Esportazione e selezionimao HSQLDB per esportare nel
+        database creato precedentemente.</p>
+        <p align="center"><img src="image/Image417.gif"
+        border="1" width="319" height="218"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Selezioniamo il database
+        con il pulsante Sfoglia</p>
+        <p align="center"><img src="image/Image418.gif"
+        border="1" width="404" height="102"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Scegliamo la Tabella e
+        il Campo con il tasto configura.</p>
+        <p align="center"><img src="image/Image419.gif"
+        border="1" width="565" height="155"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Dato che si tratta dell'orario
+        l'ho esportiamo nel campo DataOrario di Pesate.</p>
+        <p align="center"><img src="image/Image420.gif"
+        width="211" height="159"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">La modalità di
+        esportazione va bene quella di default &quot;Sostituisci&quot;,
+        mentre per quanto rigurda il record in cui esportare,
+        usiamo una condizione DataOrario (uguale) var(0)</p>
+        <p align="center"><img src="image/Image421.gif"
+        border="1" width="461" height="243"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">La condizione per la
+        scelta del record è necessaria per evitare di creare due
+        record con la stessa chiave primaria.</p>
+        <p align="left">Quindi prima andiamo a verivicare se il
+        record già esiste. Se il record esiste &quot;Sostituiamo&quot;
+        il valore Peso con quello attuale, se il record non
+        esiste creiamo un nuovo record. La condizione usa come
+        tipo di confronto &quot;Uguale&quot; e non &quot;=&quot;.
+        questo perchè &quot;=&quot; si intende fra valori
+        numerici, mentre &quot;Uguale&quot; si intende fra
+        Stringhe. Il Valore &quot;var(0)&quot; indica il valore
+        che assume la variabile di identificativo id=0. Nel
+        nostro caso quindi var(0) sarà l'attuale data ora nel
+        formato dd/MM/yyyy hh:mm:ss.</p>
+        <p align="left">In questo modo abbiamo configurato l'esportazione
+        della chiave primaria e abbiamo creato il nuovo record.
+        Aggiungiamo un commento per descrivere questa azione.</p>
+        <p align="center"><img src="image/Image422.gif"
+        border="1" width="564" height="100"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Dobbiamo aggiungere una
+        nuova azione per esportare il peso. Per vare prima
+        copiamo l-azione create precedentemente e incolliamola
+        sotto.</p>
+        <p align="center"><img src="image/Image423.gif"
+        width="553" height="177"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%">Selezioniamo la nuova azione per
+        configurarla<p align="center"><img
+        src="image/Image424.gif" border="1" width="467"
+        height="123"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Con questa azione
+        andremo a leggere il peso dal file Peso.txt.</p>
+        <p align="center"><img src="image/Image425.gif"
+        border="1" width="342" height="367"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Poi esportiamo il valore
+        nel database, ma questa volta nel campo Peso. Usiamo
+        sempre la stessa condizione per individuare il record.</p>
+        <p align="center"><img src="image/Image426.gif"
+        border="1" width="450" height="234"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Analogamente per la tara.
+        Aggiungiamo un'altra azione copiando l'azione precedente
+        facendo uso del tasto destro del mouse sull'azione da
+        copiare.</p>
+        <p align="center"><img src="image/Image427.gif"
+        border="1" width="474" height="183"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Incolliamo sempre
+        facendo uso del taso destro sull'azione selezionata. L'azione
+        così creata è configurata come quella precedente.
+        Basterà cambiare il nome del file da cui prelevare il
+        valore Tara.txt.</p>
+        <p align="center"><img src="image/Image428.gif"
+        border="1" width="386" height="223"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Cambiare il campo del
+        database in cui esportare.</p>
+        <p align="center"><img src="image/Image429.gif"
+        border="1" width="458" height="383"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Questa è la lista delle
+        azioni presente nella sequenza EsportaPesata.</p>
+        <p align="center"><img src="image/Image430.gif"
+        border="1" width="548" height="178"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h3 align="left"><a name="4">Aggiungere la sequenza nella lista
+di azioni</a></h3>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Non ci resta che
+        aggiungere la sequenza nella lista di azioni del pulsante
+        Stampa. Clicchiamo sul pulsante &quot;Stampa&quot; del
+        frame &quot;Peso.spj&quot; e configuriamo la lista di
+        azioni inserendo la sequenza che esporta il peso.</p>
+        <p align="center"><img src="image/Image431.gif"
+        width="431" height="350"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">La finestra di
+        configurazione della lista di azioni, usa il tasto
+        sfoglia per cercare il documento nella cartella Documenti.
+        Tale cartella è corretta solo se si intende inserire un'etichetta
+        da stampare, ma se si sta cercando una sequenza bisogna
+        cambiare cartella andando in Sequences. Il termine &quot;Stampa&quot;
+        nel caso della sequenza va inteso come Esegui. </p>
+        <p align="center"><img src="image/Image432.gif"
+        width="600" height="123"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Bisogna ancora associare
+        il pulsante ad una regola del canale seriale. In questo
+        modo quando arriva il peso stampiamo automaticamente.</p>
+        <p align="center"><img src="image/Image433.gif"
+        width="600" height="123"></p>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

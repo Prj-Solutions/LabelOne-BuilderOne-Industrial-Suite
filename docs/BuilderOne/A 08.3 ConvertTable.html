@@ -1,0 +1,185 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Capitolo 40</title>
+<style>
+<!--
+h1           { font-size: 24 pt }
+h2           { font-size: 18 pt }
+h3           { font-size: 14 pt }
+h4           { font-size: 12 pt }
+p            { font-size: 12 pt }
+-->
+</style>
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><h2 align="left"><a name="1">Conversione
+        di una TAbella in un altro Formato</a></h2>
+        <p align="left">Vediamo ora come sia possibile Convertire
+        una tabella e quindi un database in un altro formato.</p>
+        <p align="left">Faremo l'ipotesi di voler convertire la
+        tebella &quot;Tabella&quot; del database HSQL realizzato
+        precedentemente in HelloWorld, nel formato CSV, cioè
+        formato testo tabulato. Per prima cosa dovremo realizzare
+        un database CSV con una tabella in cui andremo ascrivere
+        tutti i record. Non è necessaruio che siano presenti
+        tutti gli stessi campi della tabella sorgente, ma solo
+        quelli che si intende effettivamente esportare. Il
+        formato deve essere coerente con il formato origine. A
+        tale scopo realizziamo prima la tabella CSV che
+        accoglierà i record.</p>
+        <p align="center"><img src="image/Image456.gif"
+        border="1" width="187" height="102"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Clicchiamo su Nuovo
+        Database.</p>
+        <p align="center"><img src="image/Image457.gif"
+        border="1" width="117" height="57"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Scegliamo CSV, come tipo
+        di databse e inseriamo un nome. Il nome, nel caso del
+        Database CSV, è un'informazione inutile perche il
+        database sarà costituito da tanti file quante sono le
+        tabelle. Tali file verranno messi nella cartella Data, ma
+        è possibile cambiarla a proprio piacimento.</p>
+        <p align="center"><img src="image/Image458.gif"
+        width="357" height="191"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Creamo una nuova tabella
+        per ospitare i dati.</p>
+        <p align="center"><img src="image/Image459.gif"
+        border="1" width="241" height="115"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Scegliamo un nome per la
+        tabella.</p>
+        <p align="center"><img src="image/Image460.gif"
+        width="297" height="128"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Aelezionioamola e
+        andiamo a editare la struttura.</p>
+        <p align="center"><img src="image/Image461.gif"
+        border="1" width="292" height="176"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Inseriamo 4 campi di
+        tipo testo (nel Caso CSV possono solo essere testo e la
+        dimensione sarà dinamica).</p>
+        <p align="center"><img src="image/Image462.gif"
+        width="516" height="253"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Ora che abbiamo la
+        tabella in cui voliamo esportare per fare la conversione
+        HSQL-&gt;CSV, aggiungiamo una nuova riga alla sequenza
+        Table_IO, selezioniamola e andiamo a segliere Table-&gt;Table
+        nel tipo di Azione.</p>
+        <p align="center"><img src="image/Image463.gif"
+        border="1" width="229" height="215"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%">Poi selezioniamo la tabella sorgente e
+        quella destinazione cliccando alla destra, sulla scritta
+        &quot;no set&quot;.<p align="center"><img
+        src="image/Image464.gif" border="1" width="293"
+        height="140"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%"><p align="left">Ora clicchiamo alla
+        destra dei parametri di configurazione per selezionale i
+        campi da esportare e dove esportarli.</p>
+        <p align="center"><img src="image/Image465.gif"
+        border="1" width="372" height="154"></p>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td width="100%">Ora bisogna selezionare i campi dell
+        atabella sorgente che intendiamo esportare, e quelli
+        della tabella destinazione in cui esporteremo.<p
+        align="center"><img src="image/Image466.gif" width="324"
+        height="260"></p>
+        <p align="left">cliccando due volte nella colonna (sorgente)
+        e nella colonna (desrtinazione) potremo selezionale il
+        campo da cui prelevare il valore e il campo in cui
+        scrivere. E' anche possibile inserire una formula per
+        manipolare, se necessario, il dato prima di importarlo.
+        Tutti i record della tabella Origine verranno scritti
+        nella tabella Destinazione, ma solo i campi selezionati.
+        Prima di importrae i record la tabella Destinazione verrà
+        resettata, cioè verranno cancellati tutti gli eventuali
+        precedenti record.</p>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

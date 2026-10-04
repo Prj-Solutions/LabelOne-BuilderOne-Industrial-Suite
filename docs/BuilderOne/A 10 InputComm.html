@@ -1,8 +1,7 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type"
-content="text/html; charset=iso-8859-1">
+<meta charset="utf-8">
 <meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
 <title>Capitolo 42</title>
 <style>
@@ -24,30 +23,30 @@ p            { font-size: 12 pt }
         Seriale/Ethernet</a></h2>
         <p align="left">I dati possono provenire anche da una
         Bilancia o da uno Scanner di Barcode o da un PLC. In
-        generale da qualunque dispositivo che Ë in grado di
+        generale da qualunque dispositivo che √® in grado di
         inviare delle informazioni su un canale seriale tipo RS232
-        o su uno Ethernet. La logica sar‡ sempre quella di usare
+        o su uno Ethernet. La logica sar√† sempre quella di usare
         i file per scambiare le informazioni. Quindi al momento
         della ricezione metteremo le informazioni in una serie di
         file attraverso un &quot;Driver&quot;, poi al momento
         giusto preleveremo tali informazione che saranno
         disponibili al nostro progetto fatto con BuilderOne o
-        pi˘ in generale a LabelOne per la stampa di etichette. L'arrivo
-        dei dati puÚ anche &quot;scatenare&quot; degli
+        pi√π in generale a LabelOne per la stampa di etichette. L'arrivo
+        dei dati pu√≤ anche &quot;scatenare&quot; degli
         automatismi &quot;condizionati&quot;. Questo vuol dire
         che possiamo controllare se i dati sono soddisfano delle
         condizioni e se si scatenare la pressione di un pulsante
         a cui saranno associate una serie di azioni.</p>
-        <p align="left">Il primo passo da fare Ë di realizzare
-        una sorta di &quot;Driver&quot; che Ë in grado di
+        <p align="left">Il primo passo da fare √® di realizzare
+        una sorta di &quot;Driver&quot; che √® in grado di
         interpretare il dato in arrivo. Se ad esempio dalla
         seriale arriva il dato a lunghezza fissa SPPPPPPTTTTTTE
-        dove S Ë lo start PPPPPP il peso TTTTTT la tara ed E l'end,
+        dove S √® lo start PPPPPP il peso TTTTTT la tara ed E l'end,
         dovremo controllare la lunghezza, ignorare S, mettere
         PPPPPP nel file peso.txt, TTTTTT nel file tara.txt ed
         ignorare E. Tutto questo viene fatto &quot;Configurando&quot;
         un generico driver.</p>
-        <p align="center"><img src="image/Image349.gif"
+        <p align="center"><img src="Image/Image349.gif"
         border="1" width="480" height="77"></p>
         </td>
     </tr>
@@ -63,7 +62,7 @@ p            { font-size: 12 pt }
         pulsante &quot;Ingresso: Bilancia, Sanner, Sincronismo..&quot;,
         si aprira la finestra per selezionare, aggiungere,
         modificare un &quot;Canale&quot;. </p>
-        <p align="center"><img src="image/Image350.gif"
+        <p align="center"><img src="Image/Image350.gif"
         width="340" height="253"></p>
         </td>
     </tr>
@@ -76,7 +75,7 @@ p            { font-size: 12 pt }
         <td width="100%"><p align="left">Nel nostro caso visto
         che non esistono Canali Installati, ne Aggiungiamo uno
         premendo il pulsante &quot;Aggiungi&quot;.</p>
-        <p align="center"><img src="image/Image351.gif"
+        <p align="center"><img src="Image/Image351.gif"
         width="340" height="253"></p>
         <p align="left">Ora selezioniamo il canale appena
         aggiunto e vedremo che il tasto &quot;Configura&quot; si
@@ -97,7 +96,7 @@ p            { font-size: 12 pt }
         caso. Di seguito descriveremo il significato dei vari
         parametri, e poi faremo l'esempio con alcuni casi pratici.
         </p>
-        <p align="center"><img src="image/Image352.gif"
+        <p align="center"><img src="Image/Image352.gif"
         width="599" height="632"></p>
         </td>
     </tr>
@@ -119,9 +118,9 @@ p            { font-size: 12 pt }
         con il tasto Conferma, salveremo comunque il nostro
         canale, ma se per errore lo eliminiamo o vogliamo
         adoperare lo stesso canale in un'altra applicazione fatta
-        con BuilderOne, non potremo usare/richiamare quello gi‡
+        con BuilderOne, non potremo usare/richiamare quello gi√†
         fatto. Quindi si consiglia di usare il tasto Salva e di
-        dare un nome quanto pi˘ esplicito possibile alla
+        dare un nome quanto pi√π esplicito possibile alla
         configurazione.</p>
         </td>
     </tr>
@@ -133,11 +132,11 @@ p            { font-size: 12 pt }
     <tr>
         <td width="100%"><h4><a name="8">Descrizione</a></h4>
         <p>Serve per riconoscere il tipo di canale seriale nel
-        caso siano presenti pi˘ canali seriali. Supponiamo
-        infatti di avere pi˘ bilancia collegate alle seriali. Le
+        caso siano presenti pi√π canali seriali. Supponiamo
+        infatti di avere pi√π bilancia collegate alle seriali. Le
         bilance sarebbero riconoscibili solo per la porta seriale
         input_Com1, input_Com2. Se invece usiamo una descrizione
-        possiamo distinguerle pi˘ facilmente BilanciaMagazzino_Com1,
+        possiamo distinguerle pi√π facilmente BilanciaMagazzino_Com1,
         BilnciaUfficio_Com2. L'estenzione Com1, Com2 viene
         aggiunta in automatico.</p>
         </td>
@@ -155,8 +154,8 @@ p            { font-size: 12 pt }
         <p align="left">Nel nostro caso selezioneremo una COM3.
         La presenza di altre COM dipende dal PC su cui si lavora.
         Se sul PC non sono installate COM la lista delle com
-        sar‡ vuota.</p>
-        <p align="center"><img src="image/Image353.gif"
+        sar√† vuota.</p>
+        <p align="center"><img src="Image/Image353.gif"
         width="331" height="169"></p>
         </td>
     </tr>
@@ -167,13 +166,13 @@ p            { font-size: 12 pt }
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
         <td width="100%"><p align="left">Oltre al nome della
-        porta Ë possibile settare la velocit‡. Le altre opzioni
-        sono fisse, ma se Ë necessario Ë possibile abilitare la
+        porta √® possibile settare la velocit√†. Le altre opzioni
+        sono fisse, ma se √® necessario √® possibile abilitare la
         configurazione completa della RS232. Per default tale
-        configurazione Ë limitata alla sola velocit‡ per
+        configurazione √® limitata alla sola velocit√† per
         evitare che utenti &quot;non esperti&quot; si trovino in
         imbarazzo o generino una configurazione non adatta. </p>
-        <p align="center"><img src="image/Image354.gif"
+        <p align="center"><img src="Image/Image354.gif"
         width="177" height="204"></p>
         </td>
     </tr>
@@ -186,9 +185,9 @@ p            { font-size: 12 pt }
         <td width="100%"><p align="left">Per abilitare la
         configurazione completa della RS232 bisogna aggiungere o
         modificare se gia' esiste la chiave varieRS232Full=true
-        nel file initProperties. Un altro modo, Ë di avviare l'editor
+        nel file initProperties. Un altro modo, √® di avviare l'editor
         di etichette LabelOne e di modificare in Configura-&gt;Opzioni</p>
-        <p align="center"><img src="image/Image355.gif"
+        <p align="center"><img src="Image/Image355.gif"
         border="1" width="391" height="122"></p>
         </td>
     </tr>
@@ -200,7 +199,7 @@ p            { font-size: 12 pt }
     <tr>
         <td width="100%"><p align="left">Nel pannello Varie-&gt;Configurazione
         Completa della RS232</p>
-        <p align="center"><img src="image/Image356.gif"
+        <p align="center"><img src="Image/Image356.gif"
         border="1" width="557" height="160"></p>
         </td>
     </tr>
@@ -213,7 +212,7 @@ p            { font-size: 12 pt }
         <td width="100%"><p align="left">Poi riavviando
         BuilderOne accedendo alla configurazione della porta
         seriale troveremo tutti i parametri configurabili</p>
-        <p align="center"><img src="image/Image357.gif"
+        <p align="center"><img src="Image/Image357.gif"
         width="210" height="280"></p>
         </td>
     </tr>
@@ -239,25 +238,25 @@ p            { font-size: 12 pt }
         <td width="100%"><h4><a name="7">TimeOut Ricezione Dati</a></h4>
         <p align="left">Questo parametro serve per generare un
         sincronismo per i pacchetti ricevuti. Va inteso come il
-        massimo intervallo di tempo che puÚ trascorrere fra due
-        successivi caratteri. Non Ë la durata della ricezione
+        massimo intervallo di tempo che pu√≤ trascorrere fra due
+        successivi caratteri. Non √® la durata della ricezione
         dell'intera stringa dato, ma solo il tempo massimo fra i
         singoli caratteri. Di solito si immagina che la stringa
         dati ci giunga tutta intera, non spezzattata in caratteri,
-        ma il caso pi˘ frequente Ë che tale stringa Ë una
+        ma il caso pi√π frequente √® che tale stringa √® una
         sequenza di caratteri, con un intervallo di tempo fra un
         carattere e quello successivo. E' molto importante tener
         conto di tale intervallo di tempo. Il TimeOut &gt;
         intervallo carattere. Scaduto tale intervallo di tempo se
-        la stringa non Ë completa, tale stringa viene gettata
+        la stringa non √® completa, tale stringa viene gettata
         via. In questo caso si suppone che la comunicazione si
         sia interrotta. Pensiamo al caso che la bilancia venga
         spenta, o che venga staccato il cavo di connessione. Se
         non esistesse un TimeOut la comunicazione non
-        funzionerebbe pi˘ perche rimarrebbe in attesa di una
-        parte della stringa che non giunger‡ mai.</p>
-        <p align="left">Il valore di 100ms Ë adatto alla maggior
-        parte dei casi. In ogni caso Ë possibile fare un test
+        funzionerebbe pi√π perche rimarrebbe in attesa di una
+        parte della stringa che non giunger√† mai.</p>
+        <p align="left">Il valore di 100ms √® adatto alla maggior
+        parte dei casi. In ogni caso √® possibile fare un test
         per la verifica di tale tempo.</p>
         </td>
     </tr>
@@ -272,7 +271,7 @@ p            { font-size: 12 pt }
         <td width="100%"><p align="left">Per Regola di un
         protocollo si intende il modo cun cui i dati vengono
         forniti dal Device (la Bilncia nel nostro esempio). Se la
-        regola Ë unica Ë sufficiente un solo pannello:</p>
+        regola √® unica √® sufficiente un solo pannello:</p>
         <p align="center">UNA SOLA REGOLA</p>
         <div align="center"><center><table border="1"
         cellpadding="0" cellspacing="0">
@@ -284,7 +283,7 @@ p            { font-size: 12 pt }
             </tr>
         </table>
         </center></div><p align="center"><img
-        src="image/Image375.gif" border="1" width="567"
+        src="Image/Image375.gif" border="1" width="567"
         height="207"></p>
         </td>
     </tr>
@@ -298,7 +297,7 @@ p            { font-size: 12 pt }
         cellspacing="0" width="100%">
             <tr>
                 <td width="100%"><p align="left">Se invece siamo
-                nel caso di pi˘ regole:</p>
+                nel caso di pi√π regole:</p>
                 <p align="center">PIU' REGOLE</p>
                 <div align="center"><center><table border="1"
                 cellpadding="0" cellspacing="0">
@@ -318,7 +317,7 @@ p            { font-size: 12 pt }
                     </tr>
                 </table>
                 </center></div><p align="center"><img
-                src="image/Image376.gif" border="1" width="571"
+                src="Image/Image376.gif" border="1" width="571"
                 height="207"></p>
                 </td>
             </tr>
@@ -332,7 +331,7 @@ p            { font-size: 12 pt }
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
         <td width="100%"><h4><a name="10">Campi di una regola</a></h4>
-        <p>Ogni regola Ë caratterizzata da un certo numero di
+        <p>Ogni regola √® caratterizzata da un certo numero di
         campi che dovranno essere configurati. Nell'esempio
         &quot;SKPPPPPPkgTTTTTTg E&quot; ci sono 7 campi. In
         seguito mostreremo come questi vanno configurati.</p>
@@ -387,7 +386,7 @@ p            { font-size: 12 pt }
                 </table>
                 </center></div></td>
                 <td align="center" width="50%"><img
-                src="image/Image374.gif" border="1" width="376"
+                src="Image/Image374.gif" border="1" width="376"
                 height="146"></td>
             </tr>
         </table>
@@ -455,16 +454,16 @@ p            { font-size: 12 pt }
         <td width="100%"><h4><a name="12">Richiesta Dati</a></h4>
         <p>La richiesta dati si usa quando il dispositivo non
         invia spontaneamente i dati ma su richiesta. In tal caso
-        puÚ essere inserito un comando per la richiesta e un
+        pu√≤ essere inserito un comando per la richiesta e un
         intervallo di tempo per l'invio della richiesta. Il
-        comando per la richiesta dati puÚ essere una stringa che
+        comando per la richiesta dati pu√≤ essere una stringa che
         contiene anche valori binari. se ad esempio la richiesta
-        viene effettuata attraverso ENQ che Ë il carattere ascii
-        5, poichË sarebbe impossibile inserire itale carattere
+        viene effettuata attraverso ENQ che √® il carattere ascii
+        5, poich√® sarebbe impossibile inserire itale carattere
         in una finestra di testo, useremo la convenzione ASCII(5).
-        CosÏ potremo inserire tutti i valori binari necessari.
+        Cos√¨ potremo inserire tutti i valori binari necessari.
         Se occorresse ENQ+CR+LF nella finestra va scritto ASCII(5)ASCII(13)ASCII(10).</p>
-        <p align="center"><img src="image/Image378.gif"
+        <p align="center"><img src="Image/Image378.gif"
         border="1" width="504" height="88"></p>
         </td>
     </tr>
@@ -477,26 +476,26 @@ p            { font-size: 12 pt }
         <td width="100%"><h4><a name="13">Uscita</a></h4>
         <p>E' possibile abilitare i dati in uscita per effettuare
         un colloquio bidirezionale con il device. Questo risulta
-        utile quando Ë necessario inviare al device perticolari
+        utile quando √® necessario inviare al device perticolari
         comandi. I comandi vanno scritti in un file e tale file
         va indicato nella finestra sottostante. Quando il comando
-        verr‡ scritto il programma lo invier‡ al dispositivo e
-        canceller‡ il file. &lt;nel file possono essere inseriti
+        verr√† scritto il programma lo invier√† al dispositivo e
+        canceller√† il file. &lt;nel file possono essere inseriti
         anche dei comandi speciali.</p>
-        <p align="center"><img src="image/Image379.gif"
+        <p align="center"><img src="Image/Image379.gif"
         border="1" width="579" height="137"></p>
         <p align="left">Se nel file scriviamo:<br>
         $S#<br>
         L1_wait(100)<br>
         $S#</p>
-        <p align="left">Il programma invier‡ $S# poi attender‡
-        100ms e poi invier‡ nuovamente $S#.</p>
+        <p align="left">Il programma invier√† $S# poi attender√†
+        100ms e poi invier√† nuovamente $S#.</p>
         <p align="left">Se nel file scriviamo:<br>
         $S#<br>
         L1_wait(ASCII(5),100)<br>
         $S#</p>
-        <p align="left">Il programma invier‡ $S# poi attender‡
-        la risposta ENQ e poi invier‡ nuovamente $S#.</p>
+        <p align="left">Il programma invier√† $S# poi attender√†
+        la risposta ENQ e poi invier√† nuovamente $S#.</p>
         <p align="left">Se la risposta ENQ non arriva entro 100ms
         il successivo comando viene inviato comunque allo scadere
         del timeout.</p>
@@ -510,10 +509,10 @@ p            { font-size: 12 pt }
     <tr>
         <td width="100%"><p align="left">Supponiamo che questa
         &quot;SKPPPPPPkgTTTTTTg E&quot; sia la regola da
-        realizzare (dopo la &quot;g&quot; c'Ë uno spazio).</p>
+        realizzare (dopo la &quot;g&quot; c'√® uno spazio).</p>
         <p align="left">Per prima cosa inseriamo una descrizione.
         Nel nostro caso Risposta alla richiesta Peso. </p>
-        <p align="center"><img src="image/Image358.gif"
+        <p align="center"><img src="Image/Image358.gif"
         border="1" width="562" height="92"></p>
         </td>
     </tr>
@@ -524,13 +523,13 @@ p            { font-size: 12 pt }
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
         <td width="100%"><p align="left">Inserimo una descrizione
-        breve &quot;Peso&quot; che ci servir‡ per eventuali
+        breve &quot;Peso&quot; che ci servir√† per eventuali
         automatismi. </p>
-        <p align="center"><img src="image/Image359.gif"
+        <p align="center"><img src="Image/Image359.gif"
         border="1" width="563" height="166"></p>
         <p align="left">In questo modo potremo assegnare un
         pulsante di Stampa o Sequencer a questa regola e quando
-        la regola Ë soddisfatta, cioË arriva il dato che
+        la regola √® soddisfatta, cio√® arriva il dato che
         soddisfa questa regola il pulsante viene premuto ed
         esegue la lista di azioni ad esso collegata.</p>
         </td>
@@ -542,14 +541,14 @@ p            { font-size: 12 pt }
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
         <td width="50%"><p align="left">Nella nostra ipotetica
-        regola SKPPPPPPkgTTTTTTg E il primo campo S Ë il
-        carattere di Start. Per noi questo campo Ë il Campo
+        regola SKPPPPPPkgTTTTTTg E il primo campo S √® il
+        carattere di Start. Per noi questo campo √® il Campo
         &quot;0&quot;.</p>
         <p>Selezioniamo il primo campo &quot;0&quot; fleggandolo,
         cosi' si abilita il pulsantino sotto che ci consente di
         configurare il campo &quot;0&quot;.</p>
         </td>
-        <td width="50%"><img src="image/Image360.gif" border="1"
+        <td width="50%"><img src="Image/Image360.gif" border="1"
         width="240" height="157"></td>
     </tr>
 </table>
@@ -560,9 +559,9 @@ p            { font-size: 12 pt }
     <tr>
         <td width="100%"><p align="left">Inseriamo &quot;1&quot;
         nel Numero di caratteri, infatti il campo &quot;0&quot;
-        Ë un carattere di start, quindi un solo carattre. Non lo
-        memoriziamo perchË non ci serve.</p>
-        <p align="center"><img src="image/Image361.gif"
+        √® un carattere di start, quindi un solo carattre. Non lo
+        memoriziamo perch√® non ci serve.</p>
+        <p align="center"><img src="Image/Image361.gif"
         width="345" height="287"></p>
         </td>
     </tr>
@@ -573,13 +572,13 @@ p            { font-size: 12 pt }
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
         <td width="50%"><p align="left">Il secondo campo (il
-        campo&quot;1&quot;) Ë K che nella nostra ipotesi
+        campo&quot;1&quot;) √® K che nella nostra ipotesi
         contiene il carattere peso stabile ad esempio &quot;S&quot;
         per stabile &quot;N&quot; per non stabile.</p>
         <p>Flegghiamo il campo 1 e premiamo sul pulsante sotto in
         corrispondenza per configurare il campo 1</p>
         </td>
-        <td width="50%"><img src="image/Image362.gif" border="1"
+        <td width="50%"><img src="Image/Image362.gif" border="1"
         width="212" height="149"></td>
     </tr>
 </table>
@@ -590,15 +589,15 @@ p            { font-size: 12 pt }
     <tr>
         <td width="100%"><p align="left">Inseriamo &quot;1&quot;
         nel Numero di caratteri, infatti il campo &quot;1&quot;
-        Ë un carattere &quot;S&quot; o &quot;N&quot;, quindi un
+        √® un carattere &quot;S&quot; o &quot;N&quot;, quindi un
         solo carattre. Flegghiamo Memorizza in File, in questo
         modo si abilita il pulsante che ci consente di cercare il
         file in cui memorizzare l'informazione peso stabile.
-        PoichË molto probabilmente il file non esiste, baster‡
+        Poich√® molto probabilmente il file non esiste, baster√†
         digitare il suo nome anche senza prolungamneto. Non
         cambiare la cartella di lavoro. I file verranno tutti
         creati nella cartella Data del progetto.</p>
-        <p align="center"><img src="image/Image363.gif"
+        <p align="center"><img src="Image/Image363.gif"
         width="345" height="287"></p>
         </td>
     </tr>
@@ -610,10 +609,10 @@ p            { font-size: 12 pt }
     <tr>
         <td width="50%"><p align="left">Passiamo al dato peso che
         supporremo un dato a lunghezza fissa con zeri in testa ad
-        esemppio 001230 per 1,230kg. Il dato Ë PPPPPP nella
+        esemppio 001230 per 1,230kg. Il dato √® PPPPPP nella
         striga SKPPPPPPkgTTTTTTg E. E' lungo 6 caratteri quindi...</p>
         </td>
-        <td width="50%"><img src="image/Image364.gif" width="206"
+        <td width="50%"><img src="Image/Image364.gif" width="206"
         height="157"></td>
     </tr>
 </table>
@@ -626,7 +625,7 @@ p            { font-size: 12 pt }
         di Caratteri&quot;, flegghiamo &quot;Memorizza in File&quot;,
         e usiamo &quot;Sfoglia&quot; per inserire il nome del
         file in cui memorizzeremo il peso Peso.txt</p>
-        <p align="center"><img src="image/Image365.gif"
+        <p align="center"><img src="Image/Image365.gif"
         width="345" height="287"></p>
         </td>
     </tr>
@@ -637,9 +636,9 @@ p            { font-size: 12 pt }
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
         <td width="50%">Passiamo al dato &quot;kg&quot; che
-        supporremo un dato a lunghezza fissa rappresentante l'unit‡
+        supporremo un dato a lunghezza fissa rappresentante l'unit√†
         di misura del peso.</td>
-        <td width="50%"><img src="image/Image366.gif" border="1"
+        <td width="50%"><img src="Image/Image366.gif" border="1"
         width="238" height="146"></td>
     </tr>
 </table>
@@ -648,9 +647,9 @@ p            { font-size: 12 pt }
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
-        <td width="100%"><p align="left">Sar‡ di lunghezza 2 e
+        <td width="100%"><p align="left">Sar√† di lunghezza 2 e
         lo memorizziamo nel file Unita.txt</p>
-        <p align="center"><img src="image/Image368.gif"
+        <p align="center"><img src="Image/Image368.gif"
         width="345" height="287"></p>
         </td>
     </tr>
@@ -662,10 +661,10 @@ p            { font-size: 12 pt }
     <tr>
         <td width="50%"><p align="left">Passiamo al dato tara che
         supporremo un dato a lunghezza fissa con zeri in testa ad
-        esemppio 000020 per 20g. Il dato Ë TTTTTTnella striga
+        esemppio 000020 per 20g. Il dato √® TTTTTTnella striga
         SKPPPPPPkgTTTTTTg E. E' lungo 6 caratteri quindi...</p>
         </td>
-        <td width="50%"><img src="image/Image369.gif" border="1"
+        <td width="50%"><img src="Image/Image369.gif" border="1"
         width="246" height="148"></td>
     </tr>
 </table>
@@ -678,7 +677,7 @@ p            { font-size: 12 pt }
         di Caratteri&quot;, flegghiamo &quot;Memorizza in File&quot;,
         e usiamo &quot;Sfoglia&quot; per inserire il nome del
         file in cui memorizzeremo la tara Tara.txt</p>
-        <p align="center"><img src="image/Image367.gif"
+        <p align="center"><img src="Image/Image367.gif"
         width="345" height="287"></p>
         </td>
     </tr>
@@ -690,9 +689,9 @@ p            { font-size: 12 pt }
     <tr>
         <td width="50%"><p align="left">Passiamo al dato &quot;g
         &quot; che supporremo un dato a lunghezza fissa
-        rappresentante l'unit‡ di misura della tara.</p>
+        rappresentante l'unit√† di misura della tara.</p>
         </td>
-        <td width="50%"><img src="image/Image370.gif" border="1"
+        <td width="50%"><img src="Image/Image370.gif" border="1"
         width="262" height="149"></td>
     </tr>
 </table>
@@ -701,9 +700,9 @@ p            { font-size: 12 pt }
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
-        <td width="100%"><p align="left">Sar‡ di lunghezza 2 e
+        <td width="100%"><p align="left">Sar√† di lunghezza 2 e
         lo memorizziamo nel file UnitaTara.txt</p>
-        <p align="center"><img src="image/Image371.gif"
+        <p align="center"><img src="Image/Image371.gif"
         width="345" height="287"></p>
         </td>
     </tr>
@@ -715,15 +714,15 @@ p            { font-size: 12 pt }
     <tr>
         <td width="50%"><p align="left">Passiamo al dato &quot;E&quot;
         che supporremo un dato a lunghezza fissa rappresenta il
-        terminatore. In realt‡ bisogna stare attenti al fatto
+        terminatore. In realt√† bisogna stare attenti al fatto
         che di solito le stringhe peso sono terminate da
         caratteri non visibili come ad esempio CRLF (ascii(13)ascii(10)).
         Quindi nel nostro caso oltre al carattere E supponiamo ci
         siano CRLF qubidi un totale di 3 caratteri. Se non siamo
-        sicuri di come Ë fatta la stringa peso conviene
+        sicuri di come √® fatta la stringa peso conviene
         osservarla attraverso il term come vedremo di seguito. </p>
         </td>
-        <td width="50%"><img src="image/Image372.gif" width="283"
+        <td width="50%"><img src="Image/Image372.gif" width="283"
         height="138"></td>
     </tr>
 </table>
@@ -734,7 +733,7 @@ p            { font-size: 12 pt }
     <tr>
         <td width="100%"><p align="left">Inseriamo lunghezza 3 e
         non memorizziamo.</p>
-        <p align="center"><img src="image/Image373.gif"
+        <p align="center"><img src="Image/Image373.gif"
         width="345" height="287"></p>
         </td>
     </tr>
@@ -747,7 +746,7 @@ p            { font-size: 12 pt }
         <td width="100%">Alla fine ci troveremo con una stringa
         di lughezza 21, possiamo controllare le lunghezze dei
         singoli campi riportate sotto ogni campo.<p
-        align="center"><img src="image/Image374.gif" border="1"
+        align="center"><img src="Image/Image374.gif" border="1"
         width="376" height="146"></p>
         </td>
     </tr>
@@ -759,21 +758,21 @@ p            { font-size: 12 pt }
     <tr>
         <td width="100%"><p align="left">Supponiamo che questa
         &quot;SKPkgTg E&quot; sia la regola da realizzare (dopo
-        la &quot;g&quot; c'Ë uno spazio). Affinche i dati a
+        la &quot;g&quot; c'√® uno spazio). Affinche i dati a
         lunghezza variabile Peso (P) e Tara (T) vengano
-        correttamente individuati Ë necessario un terminatore.
-        Nel nostro caso il terminatore Ë kg per il peso e g per
+        correttamente individuati √® necessario un terminatore.
+        Nel nostro caso il terminatore √® kg per il peso e g per
         la tara. E' necessario che il terminatore non cambi nel
         tempo.</p>
-        <p align="left">La realizzazione del driver sar‡ uguale
+        <p align="left">La realizzazione del driver sar√† uguale
         a quella del caso dei dati a lunghezza fissa, tranne per
         quanto riguarda il peso e la tara che sono i due dati a
         lunghezza variabile. In ogni caso riportiamo tutti i
-        passaggi necessari, anche se gi‡ visti nel caso dei dati
+        passaggi necessari, anche se gi√† visti nel caso dei dati
         a lunghezza fissa.</p>
         <p align="left">Per prima cosa inseriamo una descrizione.
         Nel nostro caso Risposta alla richiesta Peso. </p>
-        <p align="center"><img src="image/Image358.gif"
+        <p align="center"><img src="Image/Image358.gif"
         border="1" width="562" height="92"></p>
         </td>
     </tr>
@@ -784,13 +783,13 @@ p            { font-size: 12 pt }
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
         <td width="100%"><p align="left">Inserimo una descrizione
-        breve &quot;Peso&quot; che ci servir‡ per eventuali
+        breve &quot;Peso&quot; che ci servir√† per eventuali
         automatismi. </p>
-        <p align="center"><img src="image/Image359.gif"
+        <p align="center"><img src="Image/Image359.gif"
         border="1" width="563" height="166"></p>
         <p align="left">In questo modo potremo assegnare un
         pulsante di Stampa o Sequencer a questa regola e quando
-        la regola Ë soddisfatta, cioË arriva il dato che
+        la regola √® soddisfatta, cio√® arriva il dato che
         soddisfa questa regola il pulsante viene premuto ed
         esegue la lista di azioni ad esso collegata.</p>
         </td>
@@ -802,13 +801,13 @@ p            { font-size: 12 pt }
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
         <td width="50%"><p align="left">Nella nostra ipotetica
-        regola SKPkgTg E il primo campo S Ë il carattere di
-        Start. Per noi questo campo Ë il Campo &quot;0&quot;.</p>
+        regola SKPkgTg E il primo campo S √® il carattere di
+        Start. Per noi questo campo √® il Campo &quot;0&quot;.</p>
         <p>Selezioniamo il primo campo &quot;0&quot; fleggandolo,
         cosi' si abilita il pulsantino sotto che ci consente di
         configurare il campo &quot;0&quot;.</p>
         </td>
-        <td width="50%"><img src="image/Image360.gif" border="1"
+        <td width="50%"><img src="Image/Image360.gif" border="1"
         width="240" height="157"></td>
     </tr>
 </table>
@@ -819,9 +818,9 @@ p            { font-size: 12 pt }
     <tr>
         <td width="100%"><p align="left">Inseriamo &quot;1&quot;
         nel Numero di caratteri, infatti il campo &quot;0&quot;
-        Ë un carattere di start, quindi un solo carattre. Non lo
-        memoriziamo perchË non ci serve.</p>
-        <p align="center"><img src="image/Image361.gif"
+        √® un carattere di start, quindi un solo carattre. Non lo
+        memoriziamo perch√® non ci serve.</p>
+        <p align="center"><img src="Image/Image361.gif"
         width="345" height="287"></p>
         </td>
     </tr>
@@ -832,13 +831,13 @@ p            { font-size: 12 pt }
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
         <td width="50%"><p align="left">Il secondo campo (il
-        campo&quot;1&quot;) Ë K che nella nostra ipotesi
+        campo&quot;1&quot;) √® K che nella nostra ipotesi
         contiene il carattere peso stabile ad esempio &quot;S&quot;
         per stabile &quot;N&quot; per non stabile.</p>
         <p>Flegghiamo il campo 1 e premiamo sul pulsante sotto in
         corrispondenza per configurare il campo 1</p>
         </td>
-        <td width="50%"><img src="image/Image362.gif" border="1"
+        <td width="50%"><img src="Image/Image362.gif" border="1"
         width="212" height="149"></td>
     </tr>
 </table>
@@ -849,15 +848,15 @@ p            { font-size: 12 pt }
     <tr>
         <td width="100%"><p align="left">Inseriamo &quot;1&quot;
         nel Numero di caratteri, infatti il campo &quot;1&quot;
-        Ë un carattere &quot;S&quot; o &quot;N&quot;, quindi un
+        √® un carattere &quot;S&quot; o &quot;N&quot;, quindi un
         solo carattre. Flegghiamo Memorizza in File, in questo
         modo si abilita il pulsante che ci consente di cercare il
         file in cui memorizzare l'informazione peso stabile.
-        PoichË molto probabilmente il file non esiste, baster‡
+        Poich√® molto probabilmente il file non esiste, baster√†
         digitare il suo nome anche senza prolungamneto. Non
         cambiare la cartella di lavoro. I file verranno tutti
         creati nella cartella Data del progetto.</p>
-        <p align="center"><img src="image/Image363.gif"
+        <p align="center"><img src="Image/Image363.gif"
         width="345" height="287"></p>
         </td>
     </tr>
@@ -869,13 +868,13 @@ p            { font-size: 12 pt }
     <tr>
         <td width="50%"><p align="left">Passiamo al dato peso che
         supporremo un dato a lunghezza variabile ad esemppio 1,230
-        o 15,5. Il dato Ë P nella striga SKPkgTg E. Affinche
-        tale dato venga correttamente individuato Ë necessario
-        un terminatore. Nel nostro caso il terminatore Ë kg. Per
-        questo motivo Ë necessario che il terminatore non cambi
+        o 15,5. Il dato √® P nella striga SKPkgTg E. Affinche
+        tale dato venga correttamente individuato √® necessario
+        un terminatore. Nel nostro caso il terminatore √® kg. Per
+        questo motivo √® necessario che il terminatore non cambi
         nel tempo.</p>
         </td>
-        <td width="50%"><img src="image/Image364.gif" width="206"
+        <td width="50%"><img src="Image/Image364.gif" width="206"
         height="157"></td>
     </tr>
 </table>
@@ -887,7 +886,7 @@ p            { font-size: 12 pt }
         <td width="100%"><p align="left">Selezionare nel &quot;Tipo
         dati nel campo&quot; Stringa a lunghezza Variabile e
         nella finestra terminatore scrivere kg</p>
-        <p align="center"><img src="image/Image403.gif"
+        <p align="center"><img src="Image/Image403.gif"
         width="345" height="287"> </p>
         </td>
     </tr>
@@ -898,10 +897,10 @@ p            { font-size: 12 pt }
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
         <td width="50%"><p align="left">Passiamo al dato tara. Il
-        dato Ë T nella striga SKPkgTg E. Il terminatore Ë
+        dato √® T nella striga SKPkgTg E. Il terminatore √®
         &quot;g E&quot;+CRLF.</p>
         </td>
-        <td width="50%"><img src="image/Image404.gif" width="221"
+        <td width="50%"><img src="Image/Image404.gif" width="221"
         height="145"></td>
     </tr>
 </table>
@@ -913,7 +912,7 @@ p            { font-size: 12 pt }
         <td width="100%"><p align="left">Selezionare nel &quot;Tipo
         dati nel campo&quot; Stringa a lunghezza Variabile e
         nella finestra terminatore scrivere &quot;g E&quot;+CRLF</p>
-        <p align="center"><img src="image/Image405.gif"
+        <p align="center"><img src="Image/Image405.gif"
         width="345" height="287"></p>
         </td>
     </tr>
@@ -932,7 +931,7 @@ bilancia</a></h3>
         precedente o successivo. Vale la pena di dare un'occhiata
         prima di procedere Alla configurazione del canale. Per
         controllare la stringa possiamo usare il &quot;Term&quot;</p>
-        <p align="center"><img src="image/Image380.gif"
+        <p align="center"><img src="Image/Image380.gif"
         width="340" height="253"></p>
         </td>
     </tr>
@@ -945,12 +944,12 @@ bilancia</a></h3>
         <td width="100%"><p align="left">Si aprira' una finestra
         che consente di &quot;Vedere&quot; i dati ricevuti dal
         dispositivo e di inviarne semplicemente digitandoli nella
-        finestra. PiochË molto spesso i dati ricevuti sono
-        &quot;non stampabili&quot; cioË non si vedono come CRLF,
-        Ë possibile configurare il Term alla ricezione in
+        finestra. Pioch√® molto spesso i dati ricevuti sono
+        &quot;non stampabili&quot; cio√® non si vedono come CRLF,
+        √® possibile configurare il Term alla ricezione in
         esadecimale. In questo modo &quot;vediamo&quot; tutti i
         caratteri.</p>
-        <p align="center"><img src="image/Image381.gif"
+        <p align="center"><img src="Image/Image381.gif"
         width="591" height="367"></p>
         </td>
     </tr>
@@ -966,14 +965,14 @@ bilancia</a></h3>
         il protocollo di comunicazione di un dispositivo, ma non
         si ha fisicamente il dispositivo. Questo non ci permette
         di fare delle &quot;prove&quot; di verifica del driver
-        realizzato. Per ovviare a questo inconveniente Ë
+        realizzato. Per ovviare a questo inconveniente √®
         possibile usare un tool dato in dotazione con LabelOne/BuilderOne.
         Si trova nella cartella &quot;uty&quot; e si chiama
         ExtDataTest.jar</p>
-        <p align="left">Baster‡ cliccarci su due volte per farlo
+        <p align="left">Baster√† cliccarci su due volte per farlo
         partire. Per simulare un dispositivo reale conviene
         inserire un ritardo fra i caratteri 2o3 ms.</p>
-        <p align="center"><img src="image/Image382.gif"
+        <p align="center"><img src="Image/Image382.gif"
         width="450" height="320"></p>
         </td>
     </tr>
@@ -984,14 +983,14 @@ bilancia</a></h3>
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
         <td width="100%"><p align="left">Per usare il &quot;Test
-        invio dati&quot; bisogna avere due COM una sar‡
-        collegata al Test invio dati che simuler‡ la bilancia, l'altra
-        sar‡ collegata al progetto di BuilderOne. Per fare
-        comunicare le due seriali bisognar‡ fisicamente
+        invio dati&quot; bisogna avere due COM una sar√†
+        collegata al Test invio dati che simuler√† la bilancia, l'altra
+        sar√† collegata al progetto di BuilderOne. Per fare
+        comunicare le due seriali bisognar√† fisicamente
         collegarle con un cavo seriale cross</p>
-        <p align="center"><img src="image/Image383.gif"
+        <p align="center"><img src="Image/Image383.gif"
         border="1" width="361" height="280"></p>
-        <p align="center"><img src="image/Image384.gif"
+        <p align="center"><img src="Image/Image384.gif"
         border="1" width="576" height="275"></p>
         </td>
     </tr>
@@ -1014,9 +1013,9 @@ bilancia</a></h3>
         width="100%">
             <tr>
                 <td width="50%"><p align="right"><img
-                src="image/Image385.gif" width="450" height="320"></p>
+                src="Image/Image385.gif" width="450" height="320"></p>
                 </td>
-                <td width="50%"><img src="image/Image386.gif"
+                <td width="50%"><img src="Image/Image386.gif"
                 width="214" height="322"></td>
             </tr>
         </table>
@@ -1028,13 +1027,13 @@ bilancia</a></h3>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
-        <td width="100%"><p align="left">Come si puÚ notare non
+        <td width="100%"><p align="left">Come si pu√≤ notare non
         si vedono i due caratteri di chiusura CRLF. Per poterli
         vedere dobbiamo usare il Term in esadecimale 0x0D 0x0A
-        sono 13 e 10 cioË CRLF.</p>
-        <p align="center"><img src="image/Image387.gif"
+        sono 13 e 10 cio√® CRLF.</p>
+        <p align="center"><img src="Image/Image387.gif"
         width="647" height="196"></p>
-        <p align="left">come si puÚ notare si tratta di 21
+        <p align="left">come si pu√≤ notare si tratta di 21
         caratteri</p>
         </td>
     </tr>
@@ -1053,7 +1052,7 @@ bilancia</a></h3>
         Dato ogni 500ms&quot; e premiamo &quot;Start&quot;.
         Ovviamente tutto questo con il cavo cross collegato e con
         BuilderOne in esecuzione.</p>
-        <p align="center"><img src="image/Image388.gif"
+        <p align="center"><img src="Image/Image388.gif"
         border="1" width="744" height="585"></p>
         </td>
     </tr>
@@ -1063,19 +1062,19 @@ bilancia</a></h3>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
-        <td width="100%"><p align="left">Come si puÚ notare
-        nella finestra di debug del progetto il dato Ë
+        <td width="100%"><p align="left">Come si pu√≤ notare
+        nella finestra di debug del progetto il dato √®
         decodificato correttamente (ok fix len=21). Siamo
         avvisati che la regola a lunghezza fissa costituita da 21
-        caratteri Ë stata soddisfatta. Inoltre possiamo
+        caratteri √® stata soddisfatta. Inoltre possiamo
         osservare che usando l'invio automatico dopo 500ms
         possiamo fare una media dei tempi intercorsi per ricevere
         la stringa di dati. Nel nostro caso abbiamo impiegato 62ms
         minimo e 81 ms massimo per ricevere la stringa completa.
         Il Massimo tempo inrtercorso fra la ricezione di due
-        caratteri successivi Ë 20ms. Questa appare come un'incoerenza
-        visto che inviamo i dati con 2ms di ritardo. Ma c'Ë di
-        mezzo il PC e il sistema operativo, che non Ë in tempo
+        caratteri successivi √® 20ms. Questa appare come un'incoerenza
+        visto che inviamo i dati con 2ms di ritardo. Ma c'√® di
+        mezzo il PC e il sistema operativo, che non √® in tempo
         reale e quindi rileva la presenza di dati nella seriale
         quando ha tempo. Se andassimo a verifivare vedremmo che
         molti caratteri vengono ricevuti &quot;attaccati&quot; ad
@@ -1103,7 +1102,7 @@ bilancia</a></h3>
         frame del progetto HelloWorld. A tale scopo Facciamo un
         frame che chiameremo Peso in cui mettiamo il solito
         pulsante esci</p>
-        <p align="center"><img src="image/Image389.gif"
+        <p align="center"><img src="Image/Image389.gif"
         border="1" width="542" height="399"></p>
         </td>
     </tr>
@@ -1117,7 +1116,7 @@ bilancia</a></h3>
         di file e scegliamo come file il Peso.txt. Un monitor di
         file che &quot;guarda&quot; il file Tara.txt. Un monitor
         di file che guarda il file PesoStabile.txt. </p>
-        <p align="center"><img src="image/Image390.gif"
+        <p align="center"><img src="Image/Image390.gif"
         border="1" width="541" height="399"></p>
         </td>
     </tr>
@@ -1134,7 +1133,7 @@ bilancia</a></h3>
         le due stringhe separate da &quot;;&quot; verranno
         inviate alternativamente con l'effetto di un continuo
         variare dei dati sul monitor.</p>
-        <p align="center"><img src="image/Image391.gif"
+        <p align="center"><img src="Image/Image391.gif"
         width="450" height="320"></p>
         </td>
     </tr>
@@ -1148,12 +1147,12 @@ bilancia</a></h3>
         e poi premiamo il pulsante Start di Test Invio Dati.
         Vedremo i dati passare da un valore all'altro. Dato che
         il dato Peso e Tara sono in una forma poco presentabile
-        andiamo ad inserire la virgola decimale e l'unit‡ di
+        andiamo ad inserire la virgola decimale e l'unit√† di
         misura. Selezioniamo il monitor di file Peso e osserviamo
-        le sue propriet‡. Come si puÚ vedere c'Ë la propriet‡
-        Unit‡ di Misura che non Ë settata. Usiamo il mouse e
+        le sue propriet√†. Come si pu√≤ vedere c'√® la propriet√†
+        Unit√† di Misura che non √® settata. Usiamo il mouse e
         clicchiamo su di essa.</p>
-        <p align="center"><img src="image/Image392.gif"
+        <p align="center"><img src="Image/Image392.gif"
         border="1" width="380" height="397"></p>
         </td>
     </tr>
@@ -1170,8 +1169,8 @@ bilancia</a></h3>
         Interi 0 indica che gli interi saranno dinamici. il
         numero di decimali 2 indica che i decimali saranno fissi
         a 2 con eventuale arrotondamento. Nel nostro caso la
-        moltiplicazione per 0.01 non produrr‡ arrotondamento.</p>
-        <p align="center"><img src="image/Image393.gif"
+        moltiplicazione per 0.01 non produrr√† arrotondamento.</p>
+        <p align="center"><img src="Image/Image393.gif"
         width="247" height="250"></p>
         </td>
     </tr>
@@ -1182,9 +1181,9 @@ bilancia</a></h3>
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
         <td width="100%"><p align="left">Per quanto riguarda la
-        Tara abbiamo usato &quot;g&quot; come unit‡ di misura, 0
+        Tara abbiamo usato &quot;g&quot; come unit√† di misura, 0
         interi, 0 decimali, 1 moltiplicatore.</p>
-        <p align="center"><img src="image/Image394.gif"
+        <p align="center"><img src="Image/Image394.gif"
         border="1" width="541" height="401"></p>
         </td>
     </tr>
@@ -1199,7 +1198,7 @@ bilancia</a></h3>
         con un Led a cui settiamo come file il file Stabile.txt.
         Per indicare quando il Led deve accendersi e quando deve
         spegnersi usiamo l'opzione &quot;Messaggio Allarme&quot;<p
-        align="center"><img src="image/Image395.gif" border="1"
+        align="center"><img src="Image/Image395.gif" border="1"
         width="578" height="401"></p>
         </td>
     </tr>
@@ -1214,26 +1213,26 @@ bilancia</a></h3>
         <td width="100%">Il &quot;Messaggi d'Allarme&quot; serve
         per avvisare con un suono di un errore oppure serve a
         disabilitare dei pulsanti quando si verifica una
-        condizione. Quando la condizione Ë soddifatta i pulsanti
+        condizione. Quando la condizione √® soddifatta i pulsanti
         vengono Disabilitati o Segnalati con un riquadro verde/rosso.
-        Nel caso di un monitor di file nel caso di errore puÚ
+        Nel caso di un monitor di file nel caso di errore pu√≤
         esse mostrata un messaggio al posto del contenuto del
         file e un eventuale messaggio di non errore. Nel caso del
         led il led si illumina verde nel caso di non errore, si
         spegne grigio nel caso di errore.<p>Con il messaggio di
-        allarme Ë possibile condizionare delle azioni. Nel caso
+        allarme √® possibile condizionare delle azioni. Nel caso
         del peso del nostro esempio HelloWorld possiamo
         condizionere al peso stabile La stampa di un'etichetta. </p>
-        <p>Questa Ë la configurazione usata per il led nel caso
-        del file Stabile. La condizione d'errore Ë se il
-        contenuto del file Ë &quot;Uguale&quot; a &quot;N&quot;.
+        <p>Questa √® la configurazione usata per il led nel caso
+        del file Stabile. La condizione d'errore √® se il
+        contenuto del file √® &quot;Uguale&quot; a &quot;N&quot;.
         In tal caso il led si spegne e siamo in una condizione di
         errore, quidi possiamo eventualmente disabilitare un
         pulsante. Attenzione che fra le possibili &quot;Condizioni&quot;
-        c'e sia &quot;=&quot; che &quot;Uguale&quot;. la prima Ë
+        c'e sia &quot;=&quot; che &quot;Uguale&quot;. la prima √®
         da intendersi per i valori numerici, la seconda per i
         testi.</p>
-        <p align="center"><img src="image/Image396.gif"
+        <p align="center"><img src="Image/Image396.gif"
         width="467" height="414"></p>
         </td>
     </tr>
@@ -1250,9 +1249,9 @@ bilancia</a></h3>
         Pannello &quot;Componenti&quot; nella sezione &quot;Azioni&quot;
         con il nome &quot;Monitor di Stampa&quot;. Si chiama
         monitor di stampa perche [ molto pi# che un pulsante,
-        pero Ë possibile nascondere tutto quello che non
+        pero √® possibile nascondere tutto quello che non
         vogliamo vedere fino a farlo apparire come un semplice
-        pulsante.<p align="center"><img src="image/Image397.gif"
+        pulsante.<p align="center"><img src="Image/Image397.gif"
         border="1" width="250" height="183"></p>
         </td>
     </tr>
@@ -1265,7 +1264,7 @@ bilancia</a></h3>
         <td width="100%">Spostiamo il mouse sul frame Peso e
         clicchiamo nella posizione in cui vogliamo inserire il
         monitor di stampa.<p align="center"><img
-        src="image/Image398.gif" width="545" height="415"></p>
+        src="Image/Image398.gif" width="545" height="415"></p>
         </td>
     </tr>
 </table>
@@ -1274,15 +1273,15 @@ bilancia</a></h3>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
-        <td width="100%">Se si hanno pi˘ stampanti o si vuole
-        avere la possibilit‡ di un'anteprima oppure di poter
-        inserire il numero di copie, Il monitor di stampa Ë bene
-        che mostri tutte le sue opzioni. Ci sono casi perÚ che
+        <td width="100%">Se si hanno pi√π stampanti o si vuole
+        avere la possibilit√† di un'anteprima oppure di poter
+        inserire il numero di copie, Il monitor di stampa √® bene
+        che mostri tutte le sue opzioni. Ci sono casi per√≤ che
         tali opzioni sono superflue e conviene eliminarle. In
         questo caso possiamo fleggare Visualizza Pulsante Stampa.
         poi possiamo ridurre la dimensione del Monitor a quella
         di un pulsante.<p align="center"><img
-        src="image/Image399.gif" border="1" width="312"
+        src="Image/Image399.gif" border="1" width="312"
         height="411"></p>
         </td>
     </tr>
@@ -1293,9 +1292,9 @@ bilancia</a></h3>
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
         <td width="100%">Non ci resta che &quot;dire&quot; al Led
-        di disabilitare il pulsante di stampa quando Ë in errore,
-        cioË quando il peso non Ë stabile.<p align="center"><img
-        src="image/Image400.gif" border="1" width="545"
+        di disabilitare il pulsante di stampa quando √® in errore,
+        cio√® quando il peso non √® stabile.<p align="center"><img
+        src="Image/Image400.gif" border="1" width="545"
         height="415"></p>
         </td>
     </tr>
@@ -1306,11 +1305,11 @@ bilancia</a></h3>
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
         <td width="100%">Selezioniamo il Led e nelle sue
-        proriet‡ clicchiamo su Disabilita Azione se in Errore.
-        Verr‡ mostrato un elenco di possibili azioni
+        proriet√† clicchiamo su Disabilita Azione se in Errore.
+        Verr√† mostrato un elenco di possibili azioni
         disabilitabili, Nel nostro caso nel frame ci sono solo
         due possibili azioni Esci e Stampa. Flegghiamo Stampa.<p
-        align="center"><img src="image/Image401.gif" border="1"
+        align="center"><img src="Image/Image401.gif" border="1"
         width="318" height="414"></p>
         </td>
     </tr>
@@ -1326,10 +1325,10 @@ bilancia</a></h3>
         stia usando la stessa COM del canale della bilancia. La
         figura di seguito mostra che avviando il frame Peso, e
         usando il &quot;Test Ivio Dati&quot; premendo il pulsante
-        manuale si puÚ ossrevare come il pulsante di stampa si
+        manuale si pu√≤ ossrevare come il pulsante di stampa si
         abilita in corrispondenza del peso stabile e si
-        disabilita quando il peso non Ë stabile.<p
-        align="center"><img src="image/Image402.gif" border="1"
+        disabilita quando il peso non √® stabile.<p
+        align="center"><img src="Image/Image402.gif" border="1"
         width="556" height="345"></p>
         </td>
     </tr>

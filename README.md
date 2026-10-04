@@ -2,6 +2,11 @@
 
 Official architectural guide and integration patterns for **BuilderOne** and **LabelOne** by [PrjSolutions](https://www.prjsolutions.com).
 
+> 🌐 **[ACCEDI ALLA DOCUMENTAZIONE COMPLETA (SITO WEB NAVIGABILE)](https://prj-solutions.github.io/LabelOne-BuilderOne-Industrial-Suite/)**  
+> *Consulta la guida in linea, il manuale d'uso e l'indice di tutti i capitoli direttamente dal browser.*
+
+---
+
 BuilderOne is a low-code/no-code application builder and runtime environment for industrial end-of-line terminals, touchscreen HMIs, and weighing/labeling stations. It serves as a lightweight, cross-platform alternative to **NiceLabel PowerForms**, **Loftware BarTender Print Station**, and **Siemens WinCC**.
 
 ---

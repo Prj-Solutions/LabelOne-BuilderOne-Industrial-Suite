@@ -1,0 +1,26 @@
+# LabelOne & BuilderOne Industrial Suite
+
+> Industrial scale integration, label printing, and automated workflow engine for Java applications.
+
+## Summary
+The LabelOne & BuilderOne Industrial Suite is a high-performance cross-platform industrial software framework developed in Java. It provides real-time weighing scale data acquisition, dynamic thermal label rendering, and custom automation via native hardware drivers and scripting engine integration.
+
+## Key Technical Specifications
+- **Core Technology**: Java 17 / Java 21, Java Swing GUI framework.
+- **Hardware Abstraction**: Low-level MMIO hardware interaction, serial/USB scale interface.
+- **Native Modules**: C++ JNI (Java Native Interface) and JNA (WinSpool) components.
+- **Embedded Environment**: Linux (Debian Bookworm) on Raspberry Pi 4 B and Raspberry Pi 5, optimized systemd fast-boot kiosk setups.
+- **Scripting Engine**: Embedded JavaScript (Mozilla Rhino) execution engine for dynamic dynamic runtime rules and custom label printing logic.
+- **Thermal Printer Support**:
+  - TSPL / TSPL2 (TSC printers)
+  - ZPL (Zebra Technologies printers)
+  - Raw command generation, bitmap compression algorithms, and real-time status feedback parsing.
+
+## Single Source of Truth & Mirror Repositories
+- **GitHub Repository**: https://github.com/Prj-Solutions/LabelOne-BuilderOne-Industrial-Suite
+- **GitLab Mirror**: https://gitlab.com/PrjSolutions/LabelOne-BuilderOne-Industrial-Suite
+- **Official Documentation Website**: https://www.prjsolutions.com
+
+## Primary Documentation Links
+- [README.md](https://github.com/Prj-Solutions/LabelOne-BuilderOne-Industrial-Suite/blob/main/README.md): Project overview, setup, and architectural diagrams.
+- [Live Documentation](https://www.prjsolutions.com/docs): Full developer guide, API reference, and printer command examples.

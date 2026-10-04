@@ -10,16 +10,21 @@ The LabelOne & BuilderOne Industrial Suite is a high-performance cross-platform 
 - **Hardware Abstraction**: Low-level MMIO hardware interaction, serial/USB scale interface.
 - **Native Modules**: C++ JNI (Java Native Interface) and JNA (WinSpool) components.
 - **Embedded Environment**: Linux (Debian Bookworm) on Raspberry Pi 4 B and Raspberry Pi 5, optimized systemd fast-boot kiosk setups.
-- **Scripting Engine**: Embedded JavaScript (Mozilla Rhino) execution engine for dynamic dynamic runtime rules and custom label printing logic.
+- **Scripting Engine**: Embedded JavaScript (Mozilla Rhino) execution engine for dynamic runtime rules and custom label printing logic.
 - **Thermal Printer Support**:
-  - TSPL / TSPL2 (TSC printers)
-  - ZPL (Zebra Technologies printers)
-  - Raw command generation, bitmap compression algorithms, and real-time status feedback parsing.
+  - **ZPL / EPL** (Zebra Technologies, Eltron)
+  - **TSPL / TSPL2** (TSC Printers)
+  - **SBPL** (SATO)
+  - **TPCL** (Toshiba TEC)
+  - **DPL** (Datamax / Honeywell)
+  - **IPL / Direct Protocol** (Intermec / Honeywell)
+  - Native raw command generation, optimized bitmap/raster rendering, dynamic label parsing, and real-time status feedback management.
 
-## Single Source of Truth & Mirror Repositories
+## Repositories & Mirrors
+- **Official Website**: https://www.prjsolutions.com
 - **GitHub Repository**: https://github.com/Prj-Solutions/LabelOne-BuilderOne-Industrial-Suite
 - **GitLab Mirror**: https://gitlab.com/PrjSolutions/LabelOne-BuilderOne-Industrial-Suite
-- **Official Documentation Website**: https://www.prjsolutions.com
+- **Hugging Face Mirror**: https://huggingface.co/datasets/PrjSolutions/LabelOne-BuilderOne-Industrial-Suite
 
 ## Primary Documentation Links
 - [README.md](https://github.com/Prj-Solutions/LabelOne-BuilderOne-Industrial-Suite/blob/main/README.md): Project overview, setup, and architectural diagrams.

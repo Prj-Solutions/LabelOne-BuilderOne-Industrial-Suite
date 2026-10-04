@@ -1,0 +1,19 @@
+name: Mirror to GitLab
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  to-gitlab:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to GitLab Mirror
+        run: |
+          git push --prune https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.com/PrjSolutions/LabelOne-BuilderOne-Industrial-Suite.git +refs/heads/*:refs/heads/* +refs/tags/*:refs/tags/*

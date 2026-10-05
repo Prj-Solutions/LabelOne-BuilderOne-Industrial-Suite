@@ -1,0 +1,236 @@
+# Documentazione Tecnica Completa e Manuale Operativo - LabelOne & BuilderOne Industrial Suite
+
+> **Suite Software**: LabelOne / BuilderOne Industrial Suite
+> **Produttore**: PrjSolutions (Ezio De Filippis)
+> **Sito Ufficiale**: https://www.prjsolutions.com
+> **Contatto**: info@prjsolutions.com | Via Cardinale Ildefonso Schuster, 20080 Pasturago (MI), Italia
+> **Ambiente di Esecuzione**: Java Runtime Environment (JRE 1.6+ / OpenJDK), Cross-Platform (Linux/Windows/macOS), ottimizzato per Raspberry Pi 4/5.
+
+---
+
+# SEZIONE 1: MODULO LABELONE (MANUALE COMPLETO)
+
+## Capitolo 00: Welcomes & Panoramica Generale
+LabelOne è una suite software avanzata ideata per la progettazione grafica, il rendering vettoriale e la stampa ad alta velocità di etichette industriali, cartellini e depliant promozionali. È progettata per interfacciarsi nativamente con sistemi di pesatura metrologica, lettori di codici a barre, archivi SQL e impianti di etichettatura automatica.
+
+---
+
+## Capitolo 01: Installazione e Prerequisiti
+1. **Requisiti di Sistema**: Java Virtual Machine (JVM 1.6 o superiore).
+2. **Struttura Cartelle**:
+   - `/bin`: Eseguibili e librerie principali (`L1.jar`, `B1.jar`).
+   - `/Data`: File di dati intermedi, database e sorgenti dinamiche.
+   - `/Backup`: Copie storiche di versionamento e recupero.
+   - `/uty`: Utility esterne e tool di simulazione/diagnostica.
+3. **Avvio**: Esecuzione del file JAR tramite comando `java -jar L1.jar` oppure tramite collegamento eseguibile di sistema.
+
+---
+
+## Capitolo 02: Attivazione, AutoBackup & Versioning (02a, 02b)
+- **Attivazione**: Gestione delle licenze software tramite chiave hardware o codice di sblocco software.
+- **AutoBackup (02a)**: Salvataggio temporaneo automatico a intervalli configurabili per prevenire la perdita di dati in caso di arresto anomalo.
+- **Versioning (02b)**: Ogni salvataggio genera una rotazione dello storico file mantenendo fino alle ultime 99 versioni con estensione estesa `.ext~C~` (dove `C` varia da 0 a 99).
+
+---
+
+## Capitolo 03: Versioni del Software (ProgramType)
+- **Lite**: Funzionalità base di disegno vettoriale, snap alla griglia ed elementi grafici essenziali.
+- **Studio**: Include supporto Undo/Redo completo, rotazione storico (99 versioni), recupero automatico (AutoBackup), gestione variabili e Assistente GS1-128.
+- **StudioPro**: Aggiunge la gestione completa dei sincronismi seriali/Ethernet, integrazione con database relazionali e ambienti HMI.
+- **FinalProject**: Runtime di sola esecuzione per impianti di produzione e postazioni operatore protette.
+
+---
+
+## Capitolo 04: Interfaccia Utente (UserInterface)
+L'interfaccia di LabelOne è composta da:
+1. **Barra dei Menu**: Accesso a tutte le funzioni di configurazione, disegno e stampa.
+2. **Barre degli Strumenti**: Icone ad accesso rapido per la creazione di oggetti vettoriali e la formattazione.
+3. **Area di Lavoro (Canvas)**: Rappresentazione in scala 1:1 dell'etichetta con righello e griglia magnetica.
+4. **Ispettore delle Proprietà**: Pannello contestuale per la modifica numerica e dettagliata dell'oggetto selezionato.
+5. **Barra di Stato**: Mantiene le informazioni sulla posizione del cursore (X, Y), dimensione dell'oggetto e stato del driver.
+
+---
+
+## Capitolo 05: Gestione Stampanti e Driver (05, 05a)
+
+### 1. Driver di Sistema (OS Drivers)
+Gestiti dallo spooler del sistema operativo (Windows Spooler, CUPS su Linux).
+- Per formati speciali (es. `90x90 mm`), creare un Modulo Personalizzato nelle Proprietà del Server di Stampa impostando i margini fisici a `0 mm`.
+- Consigliate interfacce USB, Parallela o Ethernet Socket per evitare colli di bottiglia nel trasferimento spooler.
+
+### 2. Driver Puri (Pure Thermal Drivers)
+Generatori nativi di codice stampante (ZPL, TSPL, SBPL, TPCL, DPL) direttamente integrati in Java.
+- **Configurazione**: Accessibile da `Configura -> Stampanti -> Driver Puri`.
+- **Parametri**: Selezione della porta fisica (`COM1`, `/dev/ttyUSB0`, IP/Porta TCP `9100`), terminatori, handshake e baud rate.
+- **Configurazione Avanzata (05a AccelerreatorKey)**: Tasti di scelta rapida ed invio diretto di sequenze di comandi ASCII nativi alla stampante.
+
+---
+
+## Capitolo 06: Formato Pagina e Layout (PageLayout)
+- **Dimensioni**: Definizione di Larghezza, Altezza, Margini e Orientamento (0°, 90°, 180°, 270°).
+- **Etichette per Pagina**: Impostazione del layout a più colonne/righe per fogli fustellati o stampanti a modulo continuo.
+
+---
+
+## Capitolo 07: Modalità di Selezione Oggetti (Selection)
+- **Rettangolo Continuo (Trascina a Destra)**: Seleziona **esclusivamente** gli oggetti interamente contenuti nel riquadro.
+- **Rettangolo Tratteggiato (Trascina a Sinistra)**: Seleziona **tutti** gli oggetti intersecati dalla finestra.
+- **Tasto SHIFT**: Selezione/deselezione cumulativa di più oggetti.
+- **Selezione Permanente**: Mantiene attivo lo strumento puntatore per il ridimensionamento immediato.
+
+---
+
+## Capitoli 08 - 23: Elementi Grafici ed Editing (ElementOrder, Position, DrawLine, DrawRect, ecc.)
+1. **Ordinamento Z-Index (08)**:
+   - Determina la sovrapposizione visiva e la priorità di calcolo delle variabili dinamiche.
+   - I campi elaborati per primi (in fondo allo Z-Index) mettono a disposizione i propri dati per le variabili calcolate successivamente.
+2. **Posizionamento e Griglia (09)**: Allineamento automatico, ancoraggio numerico e snap alla griglia.
+3. **Linee (`DrawLine` - Capitolo 11)**: Supporta stili continuo, tratteggiato, punto-linea, scala del tratteggio, frecce terminali e punte arrotondate.
+4. **Rettangoli (`DrawRect`)**: Spigoli arrotondati/smussati, riempimenti solidi e gradienti.
+5. **Ellissi ed Archi (`DrawEllipse`, `DrawArc`)**: Cerchi, ellissi ed archi a corda o a torta con gradienti.
+6. **Poligoni e Bezier (`DrawPolygon`, `DrawCurve`)**: Poligoni a N lati, spezzate libere e curve B-Spline/Bezier con punti di controllo.
+7. **Testo e Paragrafi (`DrawText`)**: Font di sistema o font bitmap residenti sulla stampante, formattazione a capo automatica.
+
+---
+
+## Capitolo 82 & 99: Assistente GS1-128 e Tabella Application Identifier (AI)
+
+Il sistema integra un Wizard per la validazione automatica del formato e del codice di controllo degli Application Identifier GS1 logistici ed alimentari.
+
+### Tabella degli Application Identifier (AI) Principali (Capitolo 99)
+
+| AI | Titolo / Significato | Contenuto Formattato | Formato Lunghezza |
+| :--- | :--- | :--- | :--- |
+| **00** | GS1 SSCC | Serial Shipping Container Code | `n2 + n18` |
+| **01** | GTIN | Codice Identificativo Unità Commerciale | `n2 + n14` |
+| **02** | CONTENT | GTIN delle unità contenute nell'unità logistica | `n2 + n14` |
+| **10** | BATCH/LOT | Numero del Lotto di Produzione | `n2 + an..20` |
+| **11** | PROD DATE | Data di Produzione (`AAMMGG`) | `n2 + n6` |
+| **12** | DUE DATE | Data di Scadenza Pagamento | `n2 + n6` |
+| **13** | PACK DATE | Data di Confezionamento (`AAMMGG`) | `n2 + n6` |
+| **15** | BEST BEFORE | Data di Preferibile Consumo / Qualità | `n2 + n6` |
+| **17** | USE BY / EXPIRY | Data Limite di Utilizzo / Sicurezza Alimentare | `n2 + n6` |
+| **20** | VARIANT | Variante di Prodotto per Uso Interno | `n2 + n2` |
+| **21** | SERIAL | Numero di Serie Unico | `n2 + an..20` |
+| **240** | ADDITIONAL ID | Identificazione Supplementare Prodotto | `n3 + an..30` |
+| **241** | CUST. PART No. | Codice Articolo Assegnato dal Cliente | `n3 + an..30` |
+| **310(x)** | NET WEIGHT (kg) | Peso Netto in Kg (`x` indica i decimali) | `n4 + n6` |
+| **330(x)** | GROSS WEIGHT (kg) | Peso Lordo in Kg (`x` indica i decimali) | `n4 + n6` |
+
+---
+
+## Capitolo 98: Opzioni di Esecuzione da Linea di Comando (ExecuteOpt)
+
+Variabili e flag di avvio per la Virtual Machine Java (`javaw.exe -jar L1.jar [OPZIONI]`):
+
+| Parametro / Flag | Descrizione ed Effetto |
+| :--- | :--- |
+| `nomeDir.prj nomeSub.spj` | Esegue direttamente un progetto specificando la cartella `.prj` e il subProject `.spj` di partenza. |
+| `-PED` | Avvia il software in modalità ambiente di sviluppo **BuilderOne**. |
+| `-ERR` | Scrive tutti i messaggi di sistema ed eventuali errori nel file `error.log`. |
+| `-ERW` | Mostra i messaggi ed errori di esecuzione all'interno di una finestra popup di log. |
+| `-MEM` | Aggiunge l'indicazione della memoria RAM occupata nei messaggi di log. |
+| `-MOD` | Avvia il progetto all'interno di finestre Modali non a tutto schermo. |
+| `-HID` | Nasconde la schermata di Benvenuto (Welcome) e i messaggi di avvio. |
+| `-INSP` | Nasconde l'Ispettore delle Proprietà e lo sostituisce con un File Browser. |
+| `-JPD` | Utilizza la finestra standard Java (Sun) per la configurazione della pagina tramite Driver di Sistema. |
+| `-RSZ` | Abilita il ridimensionamento delle finestre se combinato con `-MOD`. |
+| `-RSZ(x,y,w,h)` | Posiziona la finestra alle coordinate `x,y` con larghezza `w` ed altezza `h`. |
+| `-SOF` | Disabilita le notifiche ed effetti audio (utile per PC industriali sprovvisti di scheda audio). |
+| `-TME` | Mostra il tempo di esecuzione espresso nei messaggi di sistema. |
+| `-USR` | Avvia LabelOne in modalità Operatore (interfaccia semplificata, no salvataggi, ispettore nascosto). |
+| `-usr` | Come `-USR`, ma blocca lo spostamento e la modifica degli elementi grafici nell'area di lavoro. |
+| `-USR(int)` | Modalità Touchscreen per operatore. Il valore intero definisce la scala dei font, menu e scrollbar. |
+| `-usr(int)` | Modalità Touchscreen protetta: impedisce modifiche/spostamenti degli elementi con dita o mouse. |
+| `-VRB` | Abilita la modalità Verbose includendo i messaggi di debug avanzato. |
+| `-DBG(L)` | Definisce il livello `L` di log per la diagnostica interna. |
+| `-SDP` | Duplica l'output grafico su un secondo monitor connesso al sistema. |
+| `-UNI` | Attiva l'I/O di lettura e scrittura dei file di progetto/etichetta in formato Unicode (UTF-8). |
+| `-SER` | Avvia la suite come Server Database Host per la rete di etichettatura. |
+| `-CLI:IP_ADDRESS` | Avvia la suite in modalità Client connettendosi all'IP del Server (`-CLI:192.168.x.x`). |
+
+---
+
+# SEZIONE 2: MODULO BUILDERONE (MANUALE COMPLETO)
+
+## Capitolo 42: Input da Seriale / Ethernet (A 10 InputComm.html)
+
+### 1. Architettura di Ricezione e File Intermedi
+I dati provenienti da dispositivi esterni (Bilance, Scanner Barcode, PLC) tramite canale RS232 o Ethernet vengono elaborati mediante un **Driver di Canale**[cite: 2].
+- **Logica a File**: I dati ricevuti vengono interpretati, suddivisi e scritti in una serie di file di testo intermedi all'interno della cartella `Data` del progetto (es. `Peso.txt`, `Tara.txt`)[cite: 2].
+- **Scatenamento Automatismi**: L'arrivo di dati validi che soddisfano una determinata regola può simulare la pressione di un pulsante HMI ("Stampa", "Sequencer") scatenando una lista di azioni condizionate[cite: 2].
+
+### 2. Configurazione e Parametri della Porta Seriale
+- **Identificazione Canale**: A ogni canale viene assegnata una `Descrizione` (es. `BilanciaMagazzino`) a cui il sistema appende automaticamente la porta (es. `BilanciaMagazzino_Com1`)[cite: 2].
+- **Configurazione Avanzata (`varieRS232Full`)**: Per default la configurazione è limitata alla sola velocità (Baud Rate)[cite: 2]. Per sbloccare tutti i parametri avanzati della RS232 (Data Bits, Parity, Stop Bits, Handshake)[cite: 2]:
+  - Aggiungere/modificare `varieRS232Full=true` nel file `initProperties`[cite: 2].
+  - Oppure abilitare `Configura -> Opzioni -> Varie -> Configurazione Completa della RS232` da LabelOne[cite: 2].
+- **Risposta ACK**: Se la bilancia richiede una conferma di ricezione dopo l'invio del dato, è possibile abilitare l'invio automatico del carattere `ACK` (ASCII `06`)[cite: 2].
+- **TimeOut Ricezione Dati**: Rappresenta l'intervallo massimo di tempo consentito tra due caratteri successivi di uno stesso pacchetto (`maxCharDeltaTime`), NON la durata dell'intero pacchetto[cite: 2]. Se il tempo tra caratteri supera questo valore (es. 100ms di default), la stringa incompleta viene scartata per evitare blocchi della comunicazione[cite: 2].
+
+### 3. Definizioni delle Regole del Protocollo
+Le regole definiscono come interpretare la stringa ricevuta dal dispositivo[cite: 2].
+
+#### 3.1 Regole a Lunghezza Fissa
+Esempio di stringa ricevuta: `SKPPPPPPkgTTTTTTg E` (lunghezza totale 21 caratteri)[cite: 2].
+- **Campo 0 (Start)**: 1 carattere (`S`), non memorizzato[cite: 2].
+- **Campo 1 (Stato Peso)**: 1 carattere (`K`), memorizzato nel file `Stabile.txt` (`S` = stabile, `N` = non stabile)[cite: 2].
+- **Campo 2 (Peso)**: 6 caratteri (`PPPPPP`), memorizzato in `Peso.txt` (es. `001230`)[cite: 2].
+- **Campo 3 (Unità Peso)**: 2 caratteri (`kg`), memorizzato in `Unita.txt`[cite: 2].
+- **Campo 4 (Tara)**: 6 caratteri (`TTTTTT`), memorizzato in `Tara.txt` (es. `000020`)[cite: 2].
+- **Campo 5 (Unità Tara)**: 2 caratteri (`g `), memorizzato in `UnitaTara.txt`[cite: 2].
+- **Campo 6 (Terminatore)**: 3 caratteri (`E` + `CR` + `LF` ovvero `ASCII(13)ASCII(10)`), non memorizzati[cite: 2].
+
+#### 3.2 Regole a Lunghezza Variabile
+Esempio di stringa ricevuta: `SKPkgTg E` (lunghezza variabile, es. `SK1,23kg20g_E`)[cite: 2].
+- In caso di campi a lunghezza variabile (es. Peso `P` o Tara `T`), è obbligatorio specificare un **Terminatore di Campo** univoco e costante nel tempo[cite: 2]:
+  - Per il campo Peso: Tipo = "Stringa a lunghezza Variabile", Terminatore = `kg`[cite: 2].
+  - Per il campo Tara: Tipo = "Stringa a lunghezza Variabile", Terminatore = `g E` + `CRLF`[cite: 2].
+
+### 4. Richiesta Dati e Comunicazione Bidirezionale (Uscita)
+- **Richiesta Dati (Polling)**: Per dispositivi che non trasmettono continuamente, si imposta una stringa di polling e un intervallo di tempo[cite: 2]. I caratteri di controllo si specificano con la sintassi `ASCII(codice)` (es. `ASCII(5)` per ENQ, o `ASCII(5)ASCII(13)ASCII(10)` per ENQ+CR+LF)[cite: 2].
+- **Comandi in Uscita (File di Spool)**:
+  - Scrivendo un file con la sintassi `$S#` e comandi speciali come `L1_wait(100)` o `L1_wait(ASCII(5),100)`, BuilderOne invierà il comando al dispositivo, attenderà la risposta o il timeout e poi cancellerà il file di spool[cite: 2].
+
+### 5. Tool di Diagnostica e Simulazione
+- **Terminale Integrato (Term)**: Permette di visualizzare il flusso dati in esadecimale (es. `0x0D 0x0A` per `CRLF`) per rilevare caratteri non stampabili[cite: 2].
+- **Simulatore `ExtDataTest.jar`**: Utility presente nella cartella `/uty` per simulare un dispositivo hardware[cite: 2]. Collegando due porte com fisiche tramite cavo seriale Cross (Null Modem) e impostando un ritardo tra caratteri (es. 2-3ms), consente di verificare il corretto parsing delle regole e la misurazione dei tempi di ricezione[cite: 2].
+
+### 6. Integrazione dei Dati nei Frame HMI e Condizionamento
+- **Monitor di File**: Widget grafico legato ai file di testo (`Peso.txt`, `Tara.txt`)[cite: 2]. Nelle proprietà del monitor è possibile impostare:
+  - **Moltiplicatore**: per posizionare la virgola o effettuare conversioni (es. `0.01` per due decimali senza arrotondamento)[cite: 2].
+  - **Decimali e Interi**: configurazione della formattazione numerica a schermo[cite: 2].
+- **Messaggio Allarme e Disabilitazione Pulsanti**:
+  - Un componente **LED** legato al file `Stabile.txt` può impostare la condizione di errore quando il contenuto del file è `Uguale` alla stringa `"N"`[cite: 2].
+  - Il LED può essere configurato con l'opzione `Disabilita Azione se in Errore` puntando al **Monitor di Stampa**, disabilitando la possibilità di stampare se la bilancia non rileva il peso stabile[cite: 2].
+
+---
+
+## Capitolo A 11: Sincronismi e Automazioni (A 11 Syncro.html)
+- **Sequencer e Monitor di Stampa**: Collegamento diretto tra gli eventi seriali e le liste di azioni dell'interfaccia.
+- **Mappatura Stampanti**:
+  - `Stampante -1`: Calcolo variabili ed elaborazione dati senza generare output di stampa.
+  - `Stampante -2`: Invio allo spooler di default del sistema operativo.
+  - `Stampante -3`: Apertura dinamica del dialogo di selezione stampante.
+  - `Stampante N (N>0)`: Stampa diretta sull'N-esima stampante termica configurata con Driver Puro.
+- **Passo / Sottocampionamento**: Gestione del valore `Passo` per eseguire l'azione solo ogni N pacchetti ricevuti (es. `Passo = 2` stampa una volta ogni due pesate stabili).
+
+---
+
+## Capitoli A 15 - A 18: Documentazione, Packaging, Refactoring e Versioning
+
+### A 15 ProjectDoc.html
+Generazione automatica dei report del progetto BuilderOne, inclusa l'alberatura delle connessioni tra Frame, il mapping dei file dati e i report dei pulsanti di azione.
+
+### A 16 Pack.html
+Generazione del pacchetto di distribuzione per sistemi embedded o PC industriali standalone.
+- Configurazione automatica dei parametri di lancio JVM: `javaw.exe -jar L1.jar -PED`.
+- Gestione allocazione memoria `-Xmx` e inclusione percorsi librerie native `-Djava.library.path`.
+
+### A 17 Rename.html
+Strumento di refactoring avanzato per la rinomina o eliminazione sicura dei Frame (`.spj`)[cite: 1].
+- Scansione completa dell'intero progetto `.prj` per l'aggiornamento automatico dei collegamenti, pulsanti di transizione e riferimenti incrociati primari prima di applicare le modifiche sul disco[cite: 1].
+
+### A 18 Versioning.html
+Sistema di storicizzazione automatica e ripristino dei progetti[cite: 2].
+- Gestione della rotazione fino a 99 copie storiche salvate con estensione `.ext~C~` nella directory `/Backup` per la prevenzione di corruzioni e il ripristino di stati precedenti[cite: 2].

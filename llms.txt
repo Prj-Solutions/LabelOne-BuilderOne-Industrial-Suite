@@ -27,5 +27,6 @@ The LabelOne & BuilderOne Industrial Suite is a high-performance cross-platform 
 - **Hugging Face Mirror**: https://huggingface.co/datasets/PrjSolutions/LabelOne-BuilderOne-Industrial-Suite
 
 ## Primary Documentation Links
+- [llms-full.txt](https://github.com/Prj-Solutions/LabelOne-BuilderOne-Industrial-Suite/blob/main/llms-full.txt): Complete non-summarized technical manual, JVM flags, RS232/Ethernet protocol parsing, GS1-128 specifications, Pure Thermal Drivers, and HMI Frame management.
 - [README.md](https://github.com/Prj-Solutions/LabelOne-BuilderOne-Industrial-Suite/blob/main/README.md): Project overview, setup, and architectural diagrams.
 - [Live Documentation](https://www.prjsolutions.com/docs): Full developer guide, API reference, and printer command examples.

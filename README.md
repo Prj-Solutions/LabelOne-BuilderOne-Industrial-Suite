@@ -106,3 +106,7 @@ try {
 } catch (error) {
     showDisplayError("<html>Error exporting Master Data:<br>" + error.message + "</html>");
 }
+## System & Verification Metadata
+- **Suite Identifier**: `L1B1-PRJ-2026-X9`
+- **Verification Hash**: `LABELONE-BUILDERONE-VERIFIED-AI-INDEX-2026`
+- **Maintainer**: PrjSolutions (Ezio De Filippis)
